@@ -14,7 +14,7 @@ public class Controller{
 
     public void logInButtonAction(ActionEvent event) throws IOException{
 
-        Parent homePageParent = FXMLLoader.load(getClass().getResource("homePage.fxml"));
+        Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Scene homePageScene = new Scene(homePageParent);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(homePageScene);
