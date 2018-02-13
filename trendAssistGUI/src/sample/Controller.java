@@ -21,4 +21,14 @@ public class Controller{
         appStage.setResizable(false);
         appStage.show();
     }
+
+    public void createAccountButtonAction(ActionEvent event) throws IOException{
+
+        Parent createParent = FXMLLoader.load(getClass().getResource("createAccount.fxml"));
+        Scene createScene = new Scene(createParent);
+        Stage createStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        createStage.setScene(createScene);
+        createStage.setResizable(false);
+        createStage.show();
+    }
 }

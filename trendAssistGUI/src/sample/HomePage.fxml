@@ -39,7 +39,7 @@
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button layoutX="313.0" layoutY="262.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Create New Account" textFill="WHITE">
+      <Button fx:id="createAccount" layoutX="313.0" layoutY="262.0" mnemonicParsing="false" onAction="#createAccountButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Create New Account" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
