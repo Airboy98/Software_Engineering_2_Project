@@ -12,8 +12,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
 
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("trendAssist");
         primaryStage.setScene(new Scene(root, 600, 300));
+
         primaryStage.show();
     }
 

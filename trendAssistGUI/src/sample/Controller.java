@@ -18,6 +18,7 @@ public class Controller{
         Scene homePageScene = new Scene(homePageParent);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(homePageScene);
+        appStage.setResizable(false);
         appStage.show();
     }
 }
