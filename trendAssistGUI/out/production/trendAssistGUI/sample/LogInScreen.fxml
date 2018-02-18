@@ -15,7 +15,6 @@
             <Blend />
          </effect></Button>
         <Label layoutX="424.0" layoutY="55.0" text="Sign in" />
-        <Label layoutX="392.0" layoutY="344.0" text="Create an Account?" underline="true" />
         <PasswordField layoutX="363.0" layoutY="227.0" promptText="password" />
     </children>
 </Pane>
