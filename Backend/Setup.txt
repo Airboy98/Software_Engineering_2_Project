@@ -1,0 +1,12 @@
+https://www.tutorialspoint.com/python/python_database_access.htm
+
+Might make into a install script to be run.
+
+sudo apt-get install python python-pip python-dev libmysqlclient-dev
+
+Test with:
+-----------------------
+#!/usr/bin/python
+
+import MySQLdb
+-----------------------
