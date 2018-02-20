@@ -1,3 +1,3 @@
 # Software2project
 
-Software Engeneering 2 project: Aaron Riggs, Michael Cade Wall, Aaron Turner, Carolyn Wu, Andre Manz
+Software Engineering 2 project: Aaron Riggs, Michael Cade Wall, Aaron Turner, Carolyn Wu, Andre Manz, and Mayur Bhakta.
