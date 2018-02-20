@@ -37,7 +37,7 @@
                           <PasswordField layoutX="363.0" layoutY="227.0" promptText="password" />
                         <ImageView fitHeight="205.0" fitWidth="252.0" layoutX="34.0" layoutY="83.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../icons/TrendAssist%20Logo2.JPG" />
+                              <Image url="/icons/TrendAssist Logo2.JPG" />
                            </image></ImageView>
                       </children>
                   </Pane>

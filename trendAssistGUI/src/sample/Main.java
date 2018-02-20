@@ -15,7 +15,7 @@ public class Main extends Application {
         primaryStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
 
         primaryStage.setTitle("trendAssist");
-        primaryStage.setScene(new Scene(root, 600, 300));
+        primaryStage.setScene(new Scene(root, 600, 400));
 
         primaryStage.show();
     }
