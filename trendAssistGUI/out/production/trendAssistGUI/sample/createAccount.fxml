@@ -13,7 +13,7 @@
       <PasswordField alignment="CENTER" layoutX="217.0" layoutY="249.0" promptText="Enter Password" />
       <PasswordField alignment="CENTER" layoutX="217.0" layoutY="283.0" promptText="Confirm Password" />
       <TextField alignment="CENTER" layoutX="216.0" layoutY="187.0" promptText="Enter Username" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="57.0" prefHeight="41.0" prefWidth="213.0" text="Create New Account" textAlignment="CENTER" textFill="#dd0a0a">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="57.0" prefHeight="41.0" prefWidth="213.0" text="Create New Account" textAlignment="CENTER" textFill="#dd0a0a">
          <font>
             <Font size="20.0" />
          </font></Label>
