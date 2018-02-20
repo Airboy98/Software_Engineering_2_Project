@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="26.0" layoutY="135.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
+      <Button layoutX="26.0" layoutY="135.0" mnemonicParsing="false" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
