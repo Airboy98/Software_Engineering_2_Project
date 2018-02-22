@@ -20,6 +20,7 @@ public class Controller{
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         appStage.setScene(homePageScene);
+        appStage.setTitle("Home Page");
         appStage.show();
     }
 
@@ -30,8 +31,10 @@ public class Controller{
         Stage createStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
+        createStage.setTitle("Create New Account");
         createStage.show();
     }
+
 
 
 }
