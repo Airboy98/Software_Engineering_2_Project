@@ -10,6 +10,7 @@ cur = conn.cursor()
 
 print "(1) Make new account"
 print "(2) check password"
+print "(3) change password (WIP)"
 
 select = raw_input()
 
@@ -52,6 +53,9 @@ elif select=="2":
     print(role)
     print ""
     print(pass_value)
+
+elif select=="3":
+    print"WIP"
 
 else:
     print "Fail"
