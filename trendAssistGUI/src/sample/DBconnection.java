@@ -13,15 +13,15 @@ import java.util.Calendar;
 
 public class DBconnection {
 
-    static private Statement st = makeconnection();
+
     static private Connection con;
 
     // Makes the connection and returns the statement
-    private static Statement makeconnection() {
+    public Connection makeconnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "0000");
-            return con.createStatement();
+            return con;
         } catch (Exception ex) {
             System.out.println("Error: " + ex);
         }
