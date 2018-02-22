@@ -5,16 +5,45 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <children>
-        <TextField layoutX="357.0" layoutY="110.0" promptText="username" />
-        <Button contentDisplay="TOP" layoutX="424.0" layoutY="290.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Signin">
-         <effect>
-            <Blend />
-         </effect></Button>
-        <Label layoutX="424.0" layoutY="55.0" text="Sign in" />
-        <PasswordField layoutX="363.0" layoutY="227.0" promptText="password" />
-    </children>
-</Pane>
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Pane layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+                      <children>
+                        <AnchorPane layoutX="334.0" layoutY="26.0" prefHeight="341.0" prefWidth="230.0" style="-fx-background-color: #FF5733;">
+                           <children>
+                              <TextField layoutX="23.0" layoutY="90.0" promptText="Username" />
+                           </children>
+                        </AnchorPane>
+                          <Button contentDisplay="TOP" layoutX="424.0" layoutY="290.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Signin">
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </Button>
+                          <Label layoutX="424.0" layoutY="56.0" prefHeight="20.0" prefWidth="70.0" text="Sign in" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                          <PasswordField layoutX="363.0" layoutY="227.0" promptText="password" />
+                        <ImageView fitHeight="205.0" fitWidth="252.0" layoutX="34.0" layoutY="83.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/icons/TrendAssist Logo2.JPG" />
+                           </image></ImageView>
+                      </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
