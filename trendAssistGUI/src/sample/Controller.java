@@ -28,13 +28,20 @@ public class Controller implements Initializable{
 
     public void logInButtonAction(ActionEvent event) throws IOException{
 
-        Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-        Scene homePageScene = new Scene(homePageParent);
-        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
-        appStage.setScene(homePageScene);
-        appStage.setTitle("Home Page");
-        appStage.show();
+        String user = "mayur";
+        String pass = "bhakta";
+
+        if(login(user, pass)) {
+            Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+            Scene homePageScene = new Scene(homePageParent);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+            appStage.setScene(homePageScene);
+            appStage.setTitle("Home Page");
+            appStage.show();
+        }
+        else
+            System.out.println("Error");
     }
 
     public void createAccountButtonAction(ActionEvent event) throws IOException{
@@ -72,12 +79,37 @@ public class Controller implements Initializable{
         dc = new DBconnection();
     }
 
+    public boolean login(String user, String pass){
+
+        String Name = new String();
+        String Pass = new String();
+        Connection con = dc.makeconnection();
+        String query = "select * from account where User = '" + user + "' && Password='" + pass + "'";
+        try {
+            ResultSet rs = con.createStatement().executeQuery(query);
+            while (rs.next()) {
+                Name = rs.getString("User");
+                Pass = rs.getString("Password");
+            }
+            if (Name.equals(user) && Pass.equals(pass)) {
+                return true;
+            }
+            else
+                return false;
+
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return true;
+    }
+
+
     public void loadDataFromDatabase(ActionEvent event) throws IOException{
         try {
             Connection con = dc.makeconnection();
             data = FXCollections.observableArrayList();
 
-            ResultSet rs = con.createStatement().executeQuery("SELECT * FROM userdetails");
+            ResultSet rs = con.createStatement().executeQuery("SELECT * FROM account");
             while (rs.next()) {
                 data.add(new UserDetails(rs.getString(1), rs.getString(2)));
             }
@@ -91,7 +123,4 @@ public class Controller implements Initializable{
         table.setItems(null);
         table.setItems(data);
     }
-
-
-
 }
