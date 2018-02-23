@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/andre/Downloads/commons-codec-1.11/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/andre/Documents/GitHub/Software2project/trendAssistEncryption - Initial Non-Working/Codec 1.1 Jar file (REQUIRED)/commons-codec-1.11.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
