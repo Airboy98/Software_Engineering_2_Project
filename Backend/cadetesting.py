@@ -37,7 +37,7 @@ conn = pymysql.connect(host="localhost",user="root",passwd="0000",db="salesdata"
 y = conn.cursor()
 
 #with open(sys.argv[1], 'r') as csvfile:
-with open('C:\\Users\cadew\Documents\GitHub\Software2project\DataImport.csv', 'r') as csvfile:
+with open('C:\\Users\cadew\OneDrive\Documents\GitHub\Software2project\DataImport.csv', 'r') as csvfile:
     timeReader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     lst = []
     for row in timeReader:
@@ -57,13 +57,18 @@ DayOfYearByWeek=whatdayyear(lst[x])
 DayOfMonth=lst[x][2][0:3]
 GrossSales=lst[x][1]
 print(thing,DayOfWeek,DayOfYearByWeek,DayOfMonth,GrossSales)
+calculate = []
 try:
-    y.execute("""INSERT INTO dailyinformation(thing,DayOfWeek,DayOfYearByWeek,DayOfMonth,GrossSales) VALUES ('%s','%s','$s','$s','$s') """,{thing,DayOfWeek,DayOfYearByWeek,DayOfMonth,GrossSales})
-    print("made it here")
+   y.execute("""SELECT * FROM dailyinformation WHERE DayOfMonth = '2mon'""")
+   calculate = y.fetchall()
+   #y.execute("""INSERT INTO dailyinformation(thing,DayOfWeek,DayOfYearByWeek,DayOfMonth,GrossSales) VALUES ('%s','%s','$s','$s','$s') """,{thing,DayOfWeek,DayOfYearByWeek,DayOfMonth,GrossSales})
+   print("made it here")
         #y.execute("""INSERT INTO 'dailyinformation' (lst[x][0],whatdaymonth(lst[x]),whatdayyear(lst[x]),lst[x][2][0:3],lst[x][1])""")
 except pymysql.InternalError as error:
         code, message = error.args
         print
         ">>>>>>>>>>>>>", code, message
+
+print(calculate)
 
 exit()
