@@ -8,8 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -25,11 +27,13 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
 
-
+    @FXML private TextField userID;
+    @FXML private PasswordField passID;
+    @FXML
     public void logInButtonAction(ActionEvent event) throws IOException{
 
-        String user = "mayur";
-        String pass = "bhakta";
+        String user = userID.getText();
+        String pass = passID.getText();
 
         if(login(user, pass)) {
             Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
