@@ -4,7 +4,7 @@ USE `accounts`;
 --
 -- Host: localhost    Database: accounts
 -- ------------------------------------------------------
--- Server version	5.7.20-log
+-- Server version	5.7.19-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,11 +25,12 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
+  `CustomerID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(45) NOT NULL,
-  `passhash` varchar(45) DEFAULT NULL,
+  `passhash` varchar(100) DEFAULT NULL,
   `position` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`CustomerID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +39,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'bob','$pbkdf2-sha256$29000$FAKgtBZirFWqFUJoTWkNQQ$wQh9hguqJvKqV8V2DR9vCKFEqzYtLdHJrc0KONpGNSY','Man'),(10,'jill','$pbkdf2-sha256$29000$uPe.lxLCOIfwnlOKEcIYAw$tXTPz3zvHoxODnOinyXes9jOtA0xP9Gqrc8oxCH7P7o','user');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-09 19:00:32
+-- Dump completed on 2018-02-22 16:27:50
