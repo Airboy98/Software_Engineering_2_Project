@@ -24,21 +24,26 @@
                               <TextField id="userID" fx:id="userID" layoutX="23.0" layoutY="90.0" promptText="Username" />
                            </children>
                         </AnchorPane>
-                          <Button contentDisplay="TOP" layoutX="424.0" layoutY="290.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Signin">
+                          <Button contentDisplay="TOP" layoutX="424.0" layoutY="290.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Sign In">
                            <effect>
                               <Blend />
                            </effect>
                         </Button>
-                          <Label layoutX="424.0" layoutY="56.0" prefHeight="20.0" prefWidth="70.0" text="Sign in" textFill="WHITE">
+                          <Label layoutX="415.0" layoutY="56.0" prefHeight="20.0" prefWidth="70.0" text="Sign In" textFill="WHITE">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
                           <PasswordField id="pass" fx:id="passID" layoutX="363.0" layoutY="227.0" promptText="password" />
-                        <ImageView fitHeight="205.0" fitWidth="252.0" layoutX="34.0" layoutY="83.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="205.0" fitWidth="252.0" layoutX="64.0" layoutY="49.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="/icons/TrendAssist Logo2.JPG" />
                            </image></ImageView>
+                        <Label alignment="CENTER" layoutX="18.0" layoutY="311.0" prefHeight="29.0" prefWidth="300.0" text="Welcome to trendAssist" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
                       </children>
                   </Pane>
                </children>
