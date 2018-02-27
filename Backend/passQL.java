@@ -1,4 +1,7 @@
 import java.math.BigInteger;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.sql.*;
 import java.util.*;
@@ -35,11 +38,15 @@ public class passQL{
         try{
             byte[] pass;
             pass = Pll.encryptPass(Password);
-            String passs = asHex(pass);
+            System.out.println(pass);
+            char[] ch = bytesToChars(pass);
+            String passs = ch.toString();
+            System.out.println(passs);
+
             String QQ = "INSERT into users (username,passhash,position) VALUES ('" + Name + "','" + passs + "','" + position + "')";
             state.execute(QQ);
             val = true;
-        }catch(SQLException exep){
+        }catch(Exception exep){//SQLException exep){
             exep.printStackTrace();
         }
         return val;
@@ -48,18 +55,29 @@ public class passQL{
     public boolean CheckPass(String uname, String pass){
         try{
             Statement st = connect.createStatement();
-            String QQ = ("SELECT * FROM users WHERE username LIKE '" + uname + "'");
+            String QQ = ("SELECT * FROM users WHERE username = '" + uname + "';");
             ResultSet rs = st.executeQuery(QQ);
-            //System.out.println(rs.getString("username"));
+
             if(rs.next()) {
                 int ID = rs.getInt("CustomerID");
                 String username = rs.getString("username");
                 String hash = rs.getString("passhash");
                 String pos = rs.getString("position");
-                byte[] ehash = hash.getBytes(StandardCharsets.UTF_8);
-                byte[] decrypted = Pll.decrypt(ehash);
+//                System.out.println(ID);
+//                System.out.println(username);
+                System.out.println(hash);
+//                System.out.println(pos);
+
+                char[] charArray = hash.toCharArray();
+                System.out.println(charArray);
+                byte[] finhash = charsToBytes(charArray);
+                //byte[] ehash = hash.getBytes(StandardCharsets.UTF_8);
+
+                System.out.println("finHash: " + finhash);
+                byte[] decrypted = Pll.decrypt(finhash);
                 System.out.println(decrypted);
                 String stm = new String(decrypted, StandardCharsets.UTF_8);
+//                System.out.println(stm);
                 if(stm.equals(pass)){
                     return true;
                 }
@@ -70,14 +88,15 @@ public class passQL{
         }
         return false;
     }
-    public static String asHex (byte buf[]) {
-        StringBuffer strbuf = new StringBuffer(buf.length * 2);
-        int i;
-        for (i = 0; i < buf.length; i++) {
-            if (((int) buf[i] & 0xff) < 0x10)
-                strbuf.append("0");
-            strbuf.append(Long.toString((int) buf[i] & 0xff, 16));
-        }
-        return strbuf.toString();
+    public byte[] charsToBytes(char[] chars){
+        Charset charset = Charset.forName("UTF-8");
+        ByteBuffer byteBuffer = charset.encode(CharBuffer.wrap(chars));
+        return Arrays.copyOf(byteBuffer.array(), byteBuffer.limit());
+    }
+
+    public char[] bytesToChars(byte[] bytes){
+        Charset charset = Charset.forName("UTF-8");
+        CharBuffer charBuffer = charset.decode(ByteBuffer.wrap(bytes));
+        return Arrays.copyOf(charBuffer.array(), charBuffer.limit());
     }
 }
