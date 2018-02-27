@@ -3,10 +3,10 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 
 public class PasswordENC {
-    String key = "1qazxsw23edcvfr45tgbnhy67ujm,ki8";
-    byte[] raw = key.getBytes();
-    SecretKeySpec skey= new SecretKeySpec(raw, "AES");
-    Cipher c;
+    private String key = "1qazxsw23edcvfr45tgbnhy67ujm,ki8";
+    private byte[] raw = key.getBytes();
+    private SecretKeySpec skey= new SecretKeySpec(raw, "AES");
+    private Cipher c;
 
     public PasswordENC(){
         try{
@@ -34,7 +34,7 @@ public class PasswordENC {
             c.init(Cipher.DECRYPT_MODE, skey);
             byte[] decrypted = c.doFinal(strToDecrypt);
 //            String st = new String(decrypted, StandardCharsets.UTF_8);
-            //System.out.println(st);
+//            System.out.println(st);
             return decrypted;
         }
         catch (Exception e)

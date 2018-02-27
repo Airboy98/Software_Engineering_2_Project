@@ -8,17 +8,23 @@ import java.util.Scanner;
 class Encrypt{
     public static void main(String[] args) throws Exception {
 
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Enter your password: ");
-        String n = reader.next();
+        passQL pass = new passQL();
+        //pass.AddUser("jimmy", "badname", "user");
 
-        PasswordENC Pll = new PasswordENC();
-        byte[] pass;
-        pass = Pll.encryptPass(n);
-        byte [] decrypted = Pll.decrypt(pass);
+        boolean check = pass.CheckPass("jimmy","badname");
 
-        String st = new String(decrypted, StandardCharsets.UTF_8);
-        System.out.println(st);
+        System.out.println(check);
+//        Scanner reader = new Scanner(System.in);
+//        System.out.println("Enter your password: ");
+//        String n = reader.next();
+//
+//        PasswordENC Pll = new PasswordENC();
+//        byte[] pass;
+//        pass = Pll.encryptPass(n);
+//        byte [] decrypted = Pll.decrypt(pass);
+//
+//        String st = new String(decrypted, StandardCharsets.UTF_8);
+//        System.out.println(st);
 
 //    String message="bla bla bla";
 //    System.out.println("String to encrypt: " + message);
