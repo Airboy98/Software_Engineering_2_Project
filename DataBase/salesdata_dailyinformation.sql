@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `salesdata` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `salesdata`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: salesdata
@@ -25,7 +23,7 @@ DROP TABLE IF EXISTS `dailyinformation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dailyinformation` (
-  `Date` date NOT NULL,
+  `Date` varchar(45) NOT NULL,
   `DayOfWeek` varchar(45) DEFAULT NULL,
   `DayOfYearByWeek` varchar(45) DEFAULT NULL,
   `DayOfMonth` varchar(45) DEFAULT NULL,
@@ -52,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-09 19:00:32
+-- Dump completed on 2018-03-01 14:20:33

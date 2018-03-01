@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `nov`
+-- Table structure for table `decem`
 --
 
-DROP TABLE IF EXISTS `nov`;
+DROP TABLE IF EXISTS `decem`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `nov` (
+CREATE TABLE `decem` (
   `DayOfMonth` varchar(45) NOT NULL,
   `AvgGrossSales` double NOT NULL,
   PRIMARY KEY (`DayOfMonth`)
@@ -30,12 +30,12 @@ CREATE TABLE `nov` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `nov`
+-- Dumping data for table `decem`
 --
 
-LOCK TABLES `nov` WRITE;
-/*!40000 ALTER TABLE `nov` DISABLE KEYS */;
-/*!40000 ALTER TABLE `nov` ENABLE KEYS */;
+LOCK TABLES `decem` WRITE;
+/*!40000 ALTER TABLE `decem` DISABLE KEYS */;
+/*!40000 ALTER TABLE `decem` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-01 14:20:34
+-- Dump completed on 2018-03-01 14:20:33
