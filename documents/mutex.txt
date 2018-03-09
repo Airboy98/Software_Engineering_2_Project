@@ -1,7 +1,7 @@
 SRS - free
 Team Member Report - free
 CM - free
-Sprint Backlog - free
+Sprint Backlog - out cade
 Product Backlog - free
-FocusGroup - free
+FocusGroup - out curalin
 Platform - free
