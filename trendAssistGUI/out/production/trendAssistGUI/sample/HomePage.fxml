@@ -46,11 +46,12 @@
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Label layoutX="114.0" layoutY="58.0" text="Hello &lt;USERNAME&gt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+      <Label alignment="CENTER" layoutX="43.0" layoutY="29.0" text="Hello &lt;USERNAME&gt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="Candara" size="36.0" />
          </font>
       </Label>
+      <Button layoutX="492.0" layoutY="80.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: ff5733;" text="Log Out" textFill="WHITE" />
    </children>
    <effect>
       <Blend />

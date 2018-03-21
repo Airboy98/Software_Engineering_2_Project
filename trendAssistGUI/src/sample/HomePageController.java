@@ -34,4 +34,16 @@ public class HomePageController {
         predStage.show();
     }
 
+    public void logout(ActionEvent event) throws IOException {
+
+        Parent predParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+        Scene predScene = new Scene(predParent);
+        Stage predStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        predStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+        predStage.setScene(predScene);
+        predStage.setTitle("Log Out");
+        predStage.show();
+    }
+
+
 }
