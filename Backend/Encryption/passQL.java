@@ -28,11 +28,9 @@ public class passQL{
     }
 
     public boolean AddUser(String Name, String Password, String position){
-        boolean val = false;
         try{
             byte[] pass;
             pass = Pll.encryptPass(Password);
-            System.out.println(pass);
             String holder = "";
             for (int i = 0; i < pass.length; i++) //to int array in string form
             {
@@ -40,11 +38,10 @@ public class passQL{
             }
             String QQ = "INSERT into users (username,passhash,position) VALUES ('" + Name + "','" + holder + "','" + position + "')";
             state.execute(QQ);
-            val = true;
-        }catch(Exception exep){//SQLException exep){
-            exep.printStackTrace();
+            return true;
+        }catch(Exception exep){//SQLException exep
+            return false;
         }
-        return val;
     }
 
     public String[] CheckPass(String uname, String pass){
