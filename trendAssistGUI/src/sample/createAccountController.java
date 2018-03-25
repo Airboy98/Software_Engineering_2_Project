@@ -55,8 +55,7 @@ public class createAccountController implements Initializable {
     ObservableList list = FXCollections.observableArrayList();
 
 
-    @FXML
-    private TextField userID;
+    @FXML private TextField userID;
     @FXML private PasswordField password1;
     @FXML private PasswordField password2;
     @FXML private ChoiceBox<String> Role;
@@ -68,6 +67,7 @@ public class createAccountController implements Initializable {
         String c = "Employee";
         list.addAll(a,b,c);
         Role.getItems().addAll(list);
+        Role.setValue("Choose a Role");
     }
 
 
