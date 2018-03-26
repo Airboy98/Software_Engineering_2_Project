@@ -30,18 +30,20 @@ public class LogInController implements Initializable{
 
         String user = userID.getText();
         String pass = passID.getText();
-
-        if(login(user, pass)) {
-            Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-            Scene homePageScene = new Scene(homePageParent);
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
-            appStage.setScene(homePageScene);
-            appStage.setTitle("Home Page");
-            appStage.show();
+        if (user.isEmpty() || pass.isEmpty()) {
+            System.out.println("Type something dumb ass!!!!!!");
+        } else {
+            if (login(user, pass)) {
+                Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+                Scene homePageScene = new Scene(homePageParent);
+                Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+                appStage.setScene(homePageScene);
+                appStage.setTitle("Home Page");
+                appStage.show();
+            } else
+                System.out.println("Error");
         }
-        else
-            System.out.println("Error");
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
