@@ -98,10 +98,12 @@ public class testing {
 				float total = 0;
 				int count = 0;
 				String query = "SELECT * FROM dailyinformation WHERE DayOfMonth = '" + x + days[y - 1] + "'";
+				System.out.println(x+days[y-1]);
 				try {
 					ResultSet rs = st.executeQuery(query);
 					while (rs.next()) {
 						total = rs.getFloat("GrossSales");
+						System.out.println(total);
 						count++;
 					}
 					dailyavg temp = new dailyavg();
@@ -112,6 +114,7 @@ public class testing {
 						temp.day = x + days[y - 1];
 						temp.grosssales = 0;
 					}
+					//System.out.println(temp.grosssales);
 					hold.add(temp);
 				} catch (SQLException e) {
 					System.out.println(e);
@@ -140,9 +143,9 @@ public class testing {
 			String query = "INSERT INTO dailyinformation SET Date=?,DayOfWeek=?,DayOfYearByWeek=?,DayOfMonth=?,GrossSales=? ON DUPLICATE KEY UPDATE DayOfWeek=VALUES(DayOfWeek),DayOfYearByWeek=VALUES(DayOfYearByWeek),DayOfMonth=VALUES(DayOfMonth),GrossSales=VALUES(GrossSales)";
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, date);
-			ps.setString(2, dayofweek);
+			ps.setString(2, dayofweek.substring(0, 3));
 			ps.setString(3, dayofyear);
-			ps.setString(4, dayofmonth);
+			ps.setString(4, dayofmonth.substring(0, 4));
 			ps.setDouble(5, GrossSales);
 			ps.executeUpdate();
 			return true;
@@ -172,7 +175,7 @@ public class testing {
 				DayOfMonth = dayofmonth(dayval) + array1[2];
 				DayOfYearByWeek = dayofmonth(dayval) * Integer.parseInt(day[0]);
 				float grossales = Float.parseFloat(array1[1]);
-				boolean ok = IntoDaily(array1[0], array1[2], Integer.toString(DayOfYearByWeek), DayOfMonth, grossales);
+				boolean ok = IntoDaily(array1[0], array1[2], Integer.toString(DayOfYearByWeek), DayOfMonth.toLowerCase(), grossales);
 			}
 			scanner.close();
 			return true;
@@ -184,7 +187,26 @@ public class testing {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(GetAvg("01/02/1996","TUESDAY"));
+		CSVupdate("C:\\Users\\cadew\\OneDrive\\Documents\\GitHub\\Software2project\\DataImport.csv");
+		testing blah=new testing();
+		boolean worked = false;
+		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
+		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
+		hold = blah.filllist();
+		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
+		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decem"};
+		Runtime r=Runtime.getRuntime();
+		float total = 0;
+		int count = 0;
+			for (int x = 0; x < 12; x++) {
+				r.gc();
+				for (int z = 1; z <= 5; z++)
+					for (int y = 0; y <= 6; y++) {
+						float avg= blah.GetAvg(months[x],z+days[y]);
+						dailyavg temp=hold.get((z*(y+1))-1);
+						//System.out.println(avg + " " + temp.grosssales);
+						worked=blah.UpdateOneDay(monthname[x],avg,z+days[y],temp.grosssales);
+					}			}	
 	}
 
 }
