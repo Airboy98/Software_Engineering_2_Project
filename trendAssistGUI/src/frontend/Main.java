@@ -1,4 +1,4 @@
-package sample;
+package frontend;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
         primaryStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
-
         primaryStage.setTitle("trendAssist");
         primaryStage.setScene(new Scene(root, 600, 400));
 

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogInController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LogInController">
    <children>
       <AnchorPane prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,15 +21,15 @@
                       <children>
                         <AnchorPane layoutX="334.0" layoutY="26.0" prefHeight="341.0" prefWidth="230.0" style="-fx-background-color: #FF5733;">
                            <children>
-                              <TextField id="userID" fx:id="userID" layoutX="32.0" layoutY="88.0" promptText="Username" />
-                                <PasswordField id="pass" fx:id="passID" layoutX="32.0" layoutY="157.0" promptText="Password" />
+                              <TextField id="userID" fx:id="userID" alignment="CENTER" layoutX="41.0" layoutY="87.0" promptText="Username" />
+                                <PasswordField id="pass" fx:id="passID" alignment="CENTER" layoutX="41.0" layoutY="158.0" promptText="Password" />
+                                <Button contentDisplay="TOP" layoutX="89.0" layoutY="270.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Sign In">
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </Button>
                            </children>
                         </AnchorPane>
-                          <Button contentDisplay="TOP" layoutX="424.0" layoutY="290.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Sign In">
-                           <effect>
-                              <Blend />
-                           </effect>
-                        </Button>
                           <Label layoutX="415.0" layoutY="56.0" prefHeight="20.0" prefWidth="70.0" text="Sign In" textFill="WHITE">
                            <font>
                               <Font size="20.0" />

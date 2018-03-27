@@ -1,4 +1,4 @@
-package sample;
+package frontend;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,6 +10,7 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
@@ -29,6 +30,7 @@ public class GenSalePredController implements Initializable {
     @FXML private BarChart<String, Double> barChart;
     @FXML private DatePicker datePicker;
     @FXML private DatePicker datePicker1;
+    @FXML private TextField Average;
 
     private ObservableList<UserDetails> data;
     private DBconnection dc;
@@ -58,22 +60,31 @@ public class GenSalePredController implements Initializable {
         table.setItems(data);
     }
 
+
+
     @FXML
     public void populateBarGraph(ActionEvent event) throws IOException {
         XYChart.Series<String, Double> series = new XYChart.Series<>();
         LocalDate ld = datePicker.getValue();
+        System.out.println(ld.getDayOfWeek());
         LocalDate ld1 = datePicker1.getValue();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         String date = ld.format(formatter);
         String date1 = ld1.format(formatter);
         System.out.println(date);
         System.out.println(date1);
+
+
+
+        Average.setText("Hey");
+
         try {
             Connection con = dc.makeconnection();
 
             PreparedStatement pstmt = con.prepareStatement("SELECT date, salescol FROM sales WHERE date >= ? AND date <= ?");
             pstmt.setString(1, date);
             pstmt.setString(2, date1);
+
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 series.getData().add(new XYChart.Data<>(rs.getString(1), rs.getDouble(2)));

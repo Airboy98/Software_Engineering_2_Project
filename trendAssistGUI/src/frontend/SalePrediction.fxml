@@ -7,9 +7,10 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1067.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GenSalePredController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1067.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.GenSalePredController">
     <children>
         <TableView fx:id="table" layoutX="55.0" layoutY="67.0" prefHeight="434.0" prefWidth="263.0">
             <columns>
@@ -28,5 +29,6 @@
         </yAxis>
       </BarChart>
       <DatePicker fx:id="datePicker1" layoutX="100.0" layoutY="597.0" />
+      <TextField fx:id="Average" layoutX="93.0" layoutY="509.0" />
     </children>
 </AnchorPane>
