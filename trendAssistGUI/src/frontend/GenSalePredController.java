@@ -1,4 +1,6 @@
 package frontend;
+import backend.testing;
+import backend.testing.*;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -64,9 +66,12 @@ public class GenSalePredController implements Initializable {
 
     @FXML
     public void populateBarGraph(ActionEvent event) throws IOException {
+
+
         XYChart.Series<String, Double> series = new XYChart.Series<>();
         LocalDate ld = datePicker.getValue();
-        System.out.println(ld.getDayOfWeek());
+        String dayOfWeek = ld.getDayOfWeek().toString();
+
         LocalDate ld1 = datePicker1.getValue();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         String date = ld.format(formatter);
@@ -74,9 +79,9 @@ public class GenSalePredController implements Initializable {
         System.out.println(date);
         System.out.println(date1);
 
-
-
-        Average.setText("Hey");
+        float avg = testing.frontGetAvg(date, dayOfWeek);
+        String value = String.valueOf(avg);
+        Average.setText(value);
 
         try {
             Connection con = dc.makeconnection();

@@ -1,4 +1,4 @@
-
+package backend;
 
 public class dailyavg {
 	public float grosssales=0;

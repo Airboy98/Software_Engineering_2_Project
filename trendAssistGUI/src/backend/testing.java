@@ -1,3 +1,5 @@
+package backend;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -8,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class testing {
 
@@ -46,7 +49,7 @@ public class testing {
 	}
 
 	// Retrieves avg for that day of the particular month
-	float GetAvg(String month, String day) {
+	static float GetAvg(String month, String day) {
 		float total = 0;
 		int count = 0;
 		String query = "SELECT * FROM dailyinformation WHERE Date LIKE '" + month + "%' AND DayOfMonth = '" + day + "'";
@@ -64,6 +67,28 @@ public class testing {
 			return 0;
 		return total / count;
 
+	}
+
+	//calls the getavg function with the strings formatted the proper way
+	public static float frontGetAvg(String date, String day1) {
+		String month= WhatMonth(date);
+		String day=formatday(day1);
+		String[] dayof = date.split("/");
+		day=dayofmonth(Integer.parseInt(dayof[1]))+day;
+		return GetAvg(month,day);
+	}
+
+	//finds the month
+	static String WhatMonth(String date) {
+		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
+		String[] day = date.split("/");
+		return monthname[Integer.parseInt(day[0])];
+	}
+
+	//formats day properly
+	static String formatday(String day) {
+		String correct=day.toLowerCase();
+		return correct.substring(0,2);
 	}
 
 	// fills arraylist for local use
@@ -130,12 +155,6 @@ public class testing {
 		}
 	}
 
-	static //finds what month the date is in
-	String WhatMonth(String date) {
-		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
-		String[] day = date.split("/");
-		return monthname[Integer.parseInt(day[0])];	
-	}
 	// reads the csv file with given pathway and updates daily information table
 	static boolean CSVupdate(String path) {
 		Scanner scanner;
@@ -167,7 +186,26 @@ public class testing {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(WhatMonth("01/02/2018"));
+		testing blah=new testing();
+		boolean worked = false;
+		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
+		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
+		hold = blah.filllist();
+		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
+		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
+		Runtime r=Runtime.getRuntime();
+		float total = 0;
+		int count = 0;
+		for (int x = 0; x < 12; x++) {
+			r.gc();
+			for (int z = 1; z <= 5; z++)
+				for (int y = 0; y <= 6; y++) {
+					float avg= blah.GetAvg(months[x],z+days[y]);
+					dailyavg temp=hold.get((z*(y+1))-1);
+					worked=blah.UpdateOneDay(monthname[x],avg,z+days[y],temp.grosssales);
+					System.out.println(worked);
+				}			}
 	}
 
 }
+
