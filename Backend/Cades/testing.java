@@ -45,13 +45,9 @@ public class testing {
 			return false;
 		}
 	}
-
-	static // Retrieves avg for that day of the particular month
-	float GetAvg(String date, String day1) {
-		String month= WhatMonth(date);
-		String day=formatday(day1);
-		String[] dayof = date.split("/");
-		day=dayofmonth(Integer.parseInt(dayof[1]))+day;
+ 
+	// Retrieves avg for that day of the particular month
+	static float GetAvg(String month, String day) {
 		float total = 0;
 		int count = 0;
 		String query = "SELECT * FROM dailyinformation WHERE Date LIKE '" + month + "%' AND DayOfMonth = '" + day + "'";
@@ -71,6 +67,15 @@ public class testing {
 
 	}
 
+	//calls the getavg function with the strings formatted the proper way
+	static float frontGetAvg(String date, String day1) {
+		String month= WhatMonth(date);
+		String day=formatday(day1);
+		String[] dayof = date.split("/");
+		day=dayofmonth(Integer.parseInt(dayof[1]))+day;
+		return GetAvg(month,day);
+	}
+	
 	//finds the month
 	static String WhatMonth(String date) {
 		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
@@ -129,8 +134,6 @@ public class testing {
 
 	}
 
-	
-	//doathing
 	// inserts into dailyinformation table
 	static boolean IntoDaily(String date, String dayofweek, String dayofyear, String dayofmonth, float GrossSales) {
 		try {
