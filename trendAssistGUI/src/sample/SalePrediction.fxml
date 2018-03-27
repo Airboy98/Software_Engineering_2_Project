@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GenSalePredController">
-   <children>
-      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn fx:id="columnUser" prefWidth="100.0" text="User" />
-          <TableColumn fx:id="columnPass" prefWidth="99.0" text="Password" />
-        </columns>
-      </TableView>
-      <Button layoutX="100.0" layoutY="240.0" mnemonicParsing="false" onAction="#loadDataFromDatabase" text="Load" />
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1067.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GenSalePredController">
+    <children>
+        <TableView fx:id="table" layoutX="55.0" layoutY="67.0" prefHeight="434.0" prefWidth="263.0">
+            <columns>
+                <TableColumn fx:id="columnUser" prefWidth="132.0" text="User" />
+                <TableColumn fx:id="columnPass" prefWidth="130.0" text="Password" />
+            </columns>
+        </TableView>
+        <Button layoutX="27.0" layoutY="554.0" mnemonicParsing="false" onAction="#populateBarGraph" text="Load" />
+        <DatePicker fx:id="datePicker" layoutX="100.0" layoutY="554.0" />
+      <BarChart fx:id="barChart" layoutX="393.0" layoutY="111.0" prefHeight="390.0" prefWidth="625.0" style="-fx-border-color: #FF5733;" title="Sales Graphical View">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </BarChart>
+      <DatePicker fx:id="datePicker1" layoutX="100.0" layoutY="597.0" />
+    </children>
 </AnchorPane>
