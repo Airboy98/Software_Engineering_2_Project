@@ -27,8 +27,9 @@ CREATE TABLE `users` (
   `username` varchar(45) NOT NULL,
   `passhash` varchar(100) DEFAULT NULL,
   `position` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`CustomerID`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`CustomerID`,`username`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +38,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (23,'jimmy','91 -12 80 24 -8 29 -104 -112 -74 13 33 -91 -91 -63 45 -91 ','user');
+INSERT INTO `users` VALUES (23,'jimmy','91 -12 80 24 -8 29 -104 -112 -74 13 33 -91 -91 -63 45 -91 ','user'),(24,'hitler','91 -106 47 -27 100 24 -68 -18 -96 106 -41 -21 64 75 124 -111 ','manager');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-21 11:22:57
+-- Dump completed on 2018-03-27  9:18:10
