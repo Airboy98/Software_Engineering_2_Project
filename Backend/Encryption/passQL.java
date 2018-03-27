@@ -31,11 +31,7 @@ public class passQL{
         try{
             byte[] pass;
             pass = Pll.encryptPass(Password);
-            String holder = "";
-            for (int i = 0; i < pass.length; i++) //to int array in string form
-            {
-                holder = holder + (int) pass[i] + " ";
-            }
+            String holder = Pll.byteToString(pass);
             String QQ = "INSERT into users (username,passhash,position) VALUES ('" + Name + "','" + holder + "','" + position + "')";
             state.execute(QQ);
             return true;
@@ -57,17 +53,7 @@ public class passQL{
                 String hash = rs.getString("passhash");
                 String pos = rs.getString("position");
 
-                String[] data = hash.split(" ");
-
-                int[] comp = new int[data.length];
-                for (int i = 0; i < data.length; i++) {
-                    comp[i] = Integer.parseInt(data[i]);
-                }
-
-                byte[] almost = new byte[comp.length];
-                for (int i = 0; i < comp.length; i++) {
-                    almost[i] = (byte) comp[i];
-                }
+                byte[] almost = Pll.stringToByte(hash);
 
                 String dec = Pll.decrypt(almost);
 

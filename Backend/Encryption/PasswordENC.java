@@ -43,4 +43,31 @@ public class PasswordENC {
         return null;
     }
 
+    public String byteToString(byte[] input)
+    {
+        String holder = "";
+        for (int i = 0; i < input.length; i++) //to int array in string form
+        {
+            holder = holder + (int) input[i] + " ";
+        }
+        return holder;
+    }
+
+    public byte[] stringToByte(String input)
+    {
+        String[] data = input.split(" ");
+
+        int[] comp = new int[data.length];
+        for (int i = 0; i < data.length; i++) {
+            comp[i] = Integer.parseInt(data[i]);
+        }
+
+        byte[] almost = new byte[comp.length];
+        for (int i = 0; i < comp.length; i++) {
+            almost[i] = (byte) comp[i];
+        }
+
+        return almost;
+    }
+
 }
