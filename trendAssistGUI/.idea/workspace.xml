@@ -70,11 +70,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="DBconnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/DBconnection.java">
+      <file leaf-file-name="PasswordENC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Encryption/PasswordENC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="160">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalePrediction.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/SalePrediction.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="275" lean-forward="false" selection-start-line="12" selection-start-column="275" selection-end-line="12" selection-end-column="275" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passQL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Encryption/passQL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+              <folding>
+                <marker date="1522186480544" expanded="true" signature="955:1061" ph="INSERT into users... " />
+                <marker date="1522186480544" expanded="true" signature="1403:1455" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testing.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/backend/testing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2924#2934#0" expanded="true" />
+                <marker date="1522188579488" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
+                <marker date="1522188579488" expanded="true" signature="1685:1698" ph="SELECT * FRO... " />
+                <marker date="1522188579488" expanded="true" signature="1685:1699" ph="SELECT * FRO... missingValue" />
+                <marker date="1522188579488" expanded="true" signature="1685:1736" ph="SELECT * FRO... missingValue" />
+                <marker date="1522188579488" expanded="true" signature="1685:1748" ph="SELECT * FRO... dailyinformation" />
+                <marker date="1522188579488" expanded="true" signature="3136:3211" ph="SELECT * FRO... dailyinformation" />
+                <marker date="1522188579488" expanded="true" signature="4196:4443" ph="INSERT INTO dailyinformation... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Encryption/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/LogInController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2399#2400#0" expanded="true" />
+                <element signature="e#2438#2439#0" expanded="true" />
+                <marker date="1522186849901" expanded="true" signature="2637:2713" ph="select * fro... account" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,61 +174,13 @@
       <file leaf-file-name="GenSalePredController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="86" column="49" lean-forward="true" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+            <state relative-caret-position="381">
+              <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1522183808873" expanded="true" signature="1657:1678" ph="SELECT * FRO... account" />
-                <marker date="1522183808873" expanded="true" signature="2926:2988" ph="SELECT date,... " />
+                <marker date="1522187246592" expanded="true" signature="1657:1678" ph="SELECT * FRO... account" />
+                <marker date="1522187246592" expanded="true" signature="2959:3021" ph="SELECT date,... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dailyavg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/backend/dailyavg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/backend/testing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2833#2843#0" expanded="true" />
-                <element signature="e#5818#5828#0" expanded="true" />
-                <marker date="1522184022230" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
-                <marker date="1522184022230" expanded="true" signature="1685:1779" ph="SELECT * FRO... dailyinformation" />
-                <marker date="1522184022230" expanded="true" signature="3045:3120" ph="SELECT * FRO... dailyinformation" />
-                <marker date="1522184022230" expanded="true" signature="3991:4238" ph="INSERT INTO dailyinformation... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createAccountController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/createAccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -151,6 +194,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GetAvg</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -186,7 +234,6 @@
         <option value="$PROJECT_DIR$/src/frontend/createAccountController.java" />
         <option value="$PROJECT_DIR$/src/frontend/DBconnection.java" />
         <option value="$PROJECT_DIR$/src/frontend/HomePageController.java" />
-        <option value="$PROJECT_DIR$/src/frontend/LogInController.java" />
         <option value="$PROJECT_DIR$/src/frontend/UserDetails.java" />
         <option value="$PROJECT_DIR$/src/frontend/Main.java" />
         <option value="$PROJECT_DIR$/src/frontend/LogInScreen.fxml" />
@@ -196,6 +243,10 @@
         <option value="$PROJECT_DIR$/src/frontend/createAccount.fxml" />
         <option value="$PROJECT_DIR$/src/backend/threadcontrol.java" />
         <option value="$PROJECT_DIR$/src/backend/dailyavg.java" />
+        <option value="$PROJECT_DIR$/src/Encryption/Main.java" />
+        <option value="$PROJECT_DIR$/src/Encryption/PasswordENC.java" />
+        <option value="$PROJECT_DIR$/src/Encryption/passQL.java" />
+        <option value="$PROJECT_DIR$/src/frontend/LogInController.java" />
         <option value="$PROJECT_DIR$/src/frontend/GenSalePredController.java" />
         <option value="$PROJECT_DIR$/src/backend/testing.java" />
       </list>
@@ -251,6 +302,19 @@
               <item name="trendAssistGUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trendAssistGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trendAssistGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Encryption" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trendAssistGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trendAssistGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Encryption" type="462c0819:PsiDirectoryNode" />
+              <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="trendAssistGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -505,7 +569,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54501000" />
+    <option name="totallyTimeSpent" value="58648000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,7 +604,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -622,7 +686,9 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -630,10 +696,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/HomePage.fxml" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/834c75a2-7f58-405d-a3e6-64fddab2d3a6/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/sample/SalePredictionController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
     <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/rt.jar!/java/awt/TextField.class" />
     <entry file="file://$PROJECT_DIR$/out/production/trendAssistGUI/sample/SalePrediction.fxml">
@@ -843,28 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/LogInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding>
-            <marker date="1522178875132" expanded="true" signature="1893:1969" ph="select * fro... account" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/UserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -876,17 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
           <caret line="13" column="112" lean-forward="false" selection-start-line="13" selection-start-column="112" selection-end-line="13" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/SalePrediction.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="275" lean-forward="false" selection-start-line="12" selection-start-column="275" selection-end-line="12" selection-end-column="275" />
           <folding />
         </state>
       </provider>
@@ -927,15 +960,7 @@
     <entry file="file://$PROJECT_DIR$/src/frontend/DBconnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -964,30 +989,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
+    <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="86" column="49" lean-forward="true" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+        <state relative-caret-position="378">
+          <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/SalePrediction.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="275" lean-forward="false" selection-start-line="12" selection-start-column="275" selection-end-line="12" selection-end-column="275" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Encryption/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Encryption/PasswordENC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Encryption/passQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+          <folding>
+            <marker date="1522186480544" expanded="true" signature="955:1061" ph="INSERT into users... " />
+            <marker date="1522186480544" expanded="true" signature="1403:1455" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1522183808873" expanded="true" signature="1657:1678" ph="SELECT * FRO... account" />
-            <marker date="1522183808873" expanded="true" signature="2926:2988" ph="SELECT date,... " />
+            <element signature="e#2399#2400#0" expanded="true" />
+            <element signature="e#2438#2439#0" expanded="true" />
+            <marker date="1522186849901" expanded="true" signature="2637:2713" ph="select * fro... account" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1522187246592" expanded="true" signature="1657:1678" ph="SELECT * FRO... account" />
+            <marker date="1522187246592" expanded="true" signature="2959:3021" ph="SELECT date,... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="711" column="19" lean-forward="false" selection-start-line="711" selection-start-column="19" selection-end-line="711" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/testing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        <state relative-caret-position="208">
+          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2833#2843#0" expanded="true" />
-            <element signature="e#5818#5828#0" expanded="true" />
-            <marker date="1522184022230" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
-            <marker date="1522184022230" expanded="true" signature="1685:1779" ph="SELECT * FRO... dailyinformation" />
-            <marker date="1522184022230" expanded="true" signature="3045:3120" ph="SELECT * FRO... dailyinformation" />
-            <marker date="1522184022230" expanded="true" signature="3991:4238" ph="INSERT INTO dailyinformation... " />
+            <element signature="e#2924#2934#0" expanded="true" />
+            <marker date="1522188579488" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
+            <marker date="1522188579488" expanded="true" signature="1685:1698" ph="SELECT * FRO... " />
+            <marker date="1522188579488" expanded="true" signature="1685:1699" ph="SELECT * FRO... missingValue" />
+            <marker date="1522188579488" expanded="true" signature="1685:1736" ph="SELECT * FRO... missingValue" />
+            <marker date="1522188579488" expanded="true" signature="1685:1748" ph="SELECT * FRO... dailyinformation" />
+            <marker date="1522188579488" expanded="true" signature="3136:3211" ph="SELECT * FRO... dailyinformation" />
+            <marker date="1522188579488" expanded="true" signature="4196:4443" ph="INSERT INTO dailyinformation... " />
           </folding>
         </state>
       </provider>

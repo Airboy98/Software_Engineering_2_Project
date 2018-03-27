@@ -1,3 +1,5 @@
+package Encryption;
+
 import java.sql.*;
 
 public class passQL{
@@ -56,7 +58,8 @@ public class passQL{
                 byte[] almost = Pll.stringToByte(hash);
 
                 String dec = Pll.decrypt(almost);
-
+                System.out.println(dec);
+                System.out.println(pass);
                 if(dec.equals(pass)){
                     ret[0] = "True";
                     ret[1] = pos;

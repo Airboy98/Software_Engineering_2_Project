@@ -1,4 +1,5 @@
 package frontend;
+import Encryption.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,6 +32,23 @@ public class LogInController implements Initializable{
 
         String user = userID.getText();
         String pass = passID.getText();
+
+//        passQL test = new passQL();
+//
+//        String[] check3 = test.CheckPass(user, pass);
+//
+//        if(check3[0] == "True" && check3[1] == "manager"){
+//            Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+//                Scene homePageScene = new Scene(homePageParent);
+//                Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//                appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+//                appStage.setScene(homePageScene);
+//                appStage.setTitle("Home Page");
+//                appStage.show();
+//        }
+//        else
+//            System.out.println("Your are wrong!");
+
         if (user.isEmpty() || pass.isEmpty()) {
             System.out.println("Type something dumb ass!!!!!!");
         } else {

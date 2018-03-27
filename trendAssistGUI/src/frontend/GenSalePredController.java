@@ -80,6 +80,7 @@ public class GenSalePredController implements Initializable {
         System.out.println(date1);
 
         float avg = testing.frontGetAvg(date, dayOfWeek);
+        System.out.println(avg);
         String value = String.valueOf(avg);
         Average.setText(value);
 
