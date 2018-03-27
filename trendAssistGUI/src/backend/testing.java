@@ -1,5 +1,3 @@
-package backend;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -132,6 +130,12 @@ public class testing {
 		}
 	}
 
+	static //finds what month the date is in
+	String WhatMonth(String date) {
+		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
+		String[] day = date.split("/");
+		return monthname[Integer.parseInt(day[0])];	
+	}
 	// reads the csv file with given pathway and updates daily information table
 	static boolean CSVupdate(String path) {
 		Scanner scanner;
@@ -163,7 +167,7 @@ public class testing {
 	}
 
 	public static void main(String[] args) {
-		//System.out.println(CSVupdate("C:\\Users\\cadew\\Documents\\GitHub\\Software2project\\DataImport.csv"));
+		System.out.println(WhatMonth("01/02/2018"));
 	}
 
 }
