@@ -11,6 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.net.URL;
@@ -49,6 +50,7 @@ public class LogInController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dc = new DBconnection();
     }
+
 
     public boolean login(String user, String pass){
 
