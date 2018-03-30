@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: salesdata
+-- Host: localhost    Database: accounts
 -- ------------------------------------------------------
 -- Server version	5.7.21-log
 
@@ -16,27 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `sep`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `sep`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sep` (
-  `DayOfMonth` varchar(45) NOT NULL,
-  `AvgGrossSales` double NOT NULL,
-  PRIMARY KEY (`DayOfMonth`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `users` (
+  `CustomerID` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `passhash` varchar(100) DEFAULT NULL,
+  `position` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`CustomerID`,`username`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sep`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `sep` WRITE;
-/*!40000 ALTER TABLE `sep` DISABLE KEYS */;
-INSERT INTO `sep` VALUES ('1fri',608.75),('1mon',320.91666),('1sat',423.6875),('1sun',41.208332),('1thu',172.35938),('1tue',71.703125),('1wed',192.4375),('2fri',63.390625),('2mon',71.703125),('2sat',316.32812),('2sun',88.859375),('2thu',55.609375),('2tue',172.35938),('2wed',423.6875),('3fri',45.53125),('3mon',192.4375),('3sat',158.9375),('3sun',61.2875),('3thu',316.32812),('3tue',423.6875),('3wed',100.328125),('4fri',422.42188),('4mon',172.35938),('4sat',91.265625),('4sun',55.375),('4thu',82.09375),('4tue',55.609375),('4wed',316.32812),('5fri',146.375),('5mon',608.75),('5sat',320.25),('5sun',299.875),('5thu',422.42188),('5tue',63.390625),('5wed',45.53125);
-/*!40000 ALTER TABLE `sep` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (23,'jimmy','91 -12 80 24 -8 29 -104 -112 -74 13 33 -91 -91 -63 45 -91 ','Employee'),(24,'hitler','91 -106 47 -27 100 24 -68 -18 -96 106 -41 -21 64 75 124 -111 ','Manager'),(31,'mayur','41 0 35 38 -112 8 -102 -106 -3 7 -81 74 -115 -27 -97 -122 ','Manager'),(32,'carolyn','66 -123 -75 117 -79 -42 -72 13 38 72 -52 -114 113 72 -127 84 ','Employee');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,8 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2018-03-30 18:21:27
-=======
--- Dump completed on 2018-03-30 18:08:29
->>>>>>> a99e72ab668a1dee9cf1d11ab5e1e30283730bc5
+-- Dump completed on 2018-03-30 18:08:30

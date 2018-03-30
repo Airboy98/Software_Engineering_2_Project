@@ -70,16 +70,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="PasswordENC.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Encryption/PasswordENC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -140,6 +130,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="testing.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/backend/testing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="581">
+              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+              <folding>
+                <marker date="1522271838873" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
+                <marker date="1522271838873" expanded="true" signature="1685:1698" ph="SELECT * FRO... " />
+                <marker date="1522271838873" expanded="true" signature="1685:1699" ph="SELECT * FRO... missingValue" />
+                <marker date="1522271838873" expanded="true" signature="1685:1736" ph="SELECT * FRO... missingValue" />
+                <marker date="1522271838873" expanded="true" signature="1685:1748" ph="SELECT * FRO... dailyinformation" />
+                <marker date="1522271838873" expanded="true" signature="3271:3346" ph="SELECT * FRO... dailyinformation" />
+                <marker date="1522271838873" expanded="true" signature="4338:4585" ph="INSERT INTO dailyinformation... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DBconnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/DBconnection.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,19 +155,6 @@
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogInScreen.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/LogInScreen.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -179,13 +174,27 @@
       <file leaf-file-name="GenSalePredController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+            <state relative-caret-position="204">
+              <caret line="122" column="26" lean-forward="true" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1522441018677" expanded="true" signature="1657:1678" ph="SELECT * FRO... account" />
-                <marker date="1522441018677" expanded="true" signature="3929:4013" ph="SELECT * FRO... missingValue" />
+                <marker date="1522450471802" expanded="true" signature="1656:1677" ph="SELECT * FRO... account" />
+                <marker date="1522450471802" expanded="true" signature="4497:4511" ph="SELECT * FRO... missingValue" />
+                <marker date="1522450471802" expanded="true" signature="4497:4544" ph="SELECT * FRO... missingValue" />
+                <marker date="1522450471802" expanded="true" signature="4497:4546" ph="SELECT * FRO... missingValue" />
+                <marker date="1522450471802" expanded="true" signature="4497:4555" ph="SELECT * FRO... missingValue" />
+                <marker date="1522450471802" expanded="true" signature="4497:4557" ph="SELECT * FRO... missingValue" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinApplication.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/com/sun/glass/ui/win/WinApplication.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -587,12 +596,12 @@
       <workItem from="1521931030443" duration="2367000" />
       <workItem from="1522004875687" duration="202000" />
       <workItem from="1522005104264" duration="3393000" />
-      <workItem from="1522272448377" duration="13501000" />
+      <workItem from="1522272448377" duration="23285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80736000" />
+    <option name="totallyTimeSpent" value="90520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -609,7 +618,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26673985" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -679,7 +688,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/rt.jar!/java/awt/TextField.class" />
     <entry file="file://$PROJECT_DIR$/out/production/trendAssistGUI/sample/SalePrediction.fxml" />
     <entry file="file://$PROJECT_DIR$/out/production/trendAssistGUI/sample/GenSalePredController.class" />
     <entry file="file://$PROJECT_DIR$/out/production/trendAssistGUI/sample/Main.class" />
@@ -749,23 +757,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/testing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1522271838873" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
-            <marker date="1522271838873" expanded="true" signature="1685:1698" ph="SELECT * FRO... " />
-            <marker date="1522271838873" expanded="true" signature="1685:1699" ph="SELECT * FRO... missingValue" />
-            <marker date="1522271838873" expanded="true" signature="1685:1736" ph="SELECT * FRO... missingValue" />
-            <marker date="1522271838873" expanded="true" signature="1685:1748" ph="SELECT * FRO... dailyinformation" />
-            <marker date="1522271838873" expanded="true" signature="3271:3346" ph="SELECT * FRO... dailyinformation" />
-            <marker date="1522271838873" expanded="true" signature="4338:4585" ph="INSERT INTO dailyinformation... " />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Encryption/Main.java">
@@ -894,14 +885,42 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/testing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+          <folding>
+            <marker date="1522271838873" expanded="true" signature="1146:1271" ph="INSERT INTO missingValue... " />
+            <marker date="1522271838873" expanded="true" signature="1685:1698" ph="SELECT * FRO... " />
+            <marker date="1522271838873" expanded="true" signature="1685:1699" ph="SELECT * FRO... missingValue" />
+            <marker date="1522271838873" expanded="true" signature="1685:1736" ph="SELECT * FRO... missingValue" />
+            <marker date="1522271838873" expanded="true" signature="1685:1748" ph="SELECT * FRO... dailyinformation" />
+            <marker date="1522271838873" expanded="true" signature="3271:3346" ph="SELECT * FRO... dailyinformation" />
+            <marker date="1522271838873" expanded="true" signature="4338:4585" ph="INSERT INTO dailyinformation... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/com/sun/glass/ui/win/WinApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        <state relative-caret-position="204">
+          <caret line="122" column="26" lean-forward="true" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1522441018677" expanded="true" signature="1657:1678" ph="SELECT * FRO... account" />
-            <marker date="1522441018677" expanded="true" signature="3929:4013" ph="SELECT * FRO... missingValue" />
+            <marker date="1522450471802" expanded="true" signature="1656:1677" ph="SELECT * FRO... account" />
+            <marker date="1522450471802" expanded="true" signature="4497:4511" ph="SELECT * FRO... missingValue" />
+            <marker date="1522450471802" expanded="true" signature="4497:4544" ph="SELECT * FRO... missingValue" />
+            <marker date="1522450471802" expanded="true" signature="4497:4546" ph="SELECT * FRO... missingValue" />
+            <marker date="1522450471802" expanded="true" signature="4497:4555" ph="SELECT * FRO... missingValue" />
+            <marker date="1522450471802" expanded="true" signature="4497:4557" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>

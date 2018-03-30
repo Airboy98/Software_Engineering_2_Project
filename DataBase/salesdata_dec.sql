@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `sep`
+-- Table structure for table `dec`
 --
 
-DROP TABLE IF EXISTS `sep`;
+DROP TABLE IF EXISTS `dec`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sep` (
+CREATE TABLE `dec` (
   `DayOfMonth` varchar(45) NOT NULL,
   `AvgGrossSales` double NOT NULL,
   PRIMARY KEY (`DayOfMonth`)
@@ -30,13 +30,12 @@ CREATE TABLE `sep` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sep`
+-- Dumping data for table `dec`
 --
 
-LOCK TABLES `sep` WRITE;
-/*!40000 ALTER TABLE `sep` DISABLE KEYS */;
-INSERT INTO `sep` VALUES ('1fri',608.75),('1mon',320.91666),('1sat',423.6875),('1sun',41.208332),('1thu',172.35938),('1tue',71.703125),('1wed',192.4375),('2fri',63.390625),('2mon',71.703125),('2sat',316.32812),('2sun',88.859375),('2thu',55.609375),('2tue',172.35938),('2wed',423.6875),('3fri',45.53125),('3mon',192.4375),('3sat',158.9375),('3sun',61.2875),('3thu',316.32812),('3tue',423.6875),('3wed',100.328125),('4fri',422.42188),('4mon',172.35938),('4sat',91.265625),('4sun',55.375),('4thu',82.09375),('4tue',55.609375),('4wed',316.32812),('5fri',146.375),('5mon',608.75),('5sat',320.25),('5sun',299.875),('5thu',422.42188),('5tue',63.390625),('5wed',45.53125);
-/*!40000 ALTER TABLE `sep` ENABLE KEYS */;
+LOCK TABLES `dec` WRITE;
+/*!40000 ALTER TABLE `dec` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dec` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,8 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2018-03-30 18:21:27
-=======
--- Dump completed on 2018-03-30 18:08:29
->>>>>>> a99e72ab668a1dee9cf1d11ab5e1e30283730bc5
+-- Dump completed on 2018-03-30 18:08:30
