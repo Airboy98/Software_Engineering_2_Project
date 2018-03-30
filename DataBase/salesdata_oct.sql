@@ -35,7 +35,7 @@ CREATE TABLE `oct` (
 
 LOCK TABLES `oct` WRITE;
 /*!40000 ALTER TABLE `oct` DISABLE KEYS */;
-INSERT INTO `oct` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',0),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
+INSERT INTO `oct` VALUES ('1fri',608.75),('1mon',320.91666),('1sat',423.6875),('1sun',41.208332),('1thu',172.35938),('1tue',71.703125),('1wed',192.4375),('2fri',63.390625),('2mon',71.703125),('2sat',316.32812),('2sun',88.859375),('2thu',55.609375),('2tue',172.35938),('2wed',423.6875),('3fri',45.53125),('3mon',192.4375),('3sat',158.9375),('3sun',61.2875),('3thu',316.32812),('3tue',423.6875),('3wed',100.328125),('4fri',422.42188),('4mon',172.35938),('4sat',91.265625),('4sun',55.375),('4thu',82.09375),('4tue',55.609375),('4wed',316.32812),('5fri',146.375),('5mon',608.75),('5sat',320.25),('5sun',299.875),('5thu',422.42188),('5tue',63.390625),('5wed',45.53125);
 /*!40000 ALTER TABLE `oct` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-30 16:49:28
+-- Dump completed on 2018-03-30 18:21:29
