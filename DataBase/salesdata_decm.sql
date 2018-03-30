@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `dec`
+-- Table structure for table `decm`
 --
 
-DROP TABLE IF EXISTS `dec`;
+DROP TABLE IF EXISTS `decm`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dec` (
+CREATE TABLE `decm` (
   `DayOfMonth` varchar(45) NOT NULL,
   `AvgGrossSales` double NOT NULL,
   PRIMARY KEY (`DayOfMonth`)
@@ -30,12 +30,13 @@ CREATE TABLE `dec` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `dec`
+-- Dumping data for table `decm`
 --
 
-LOCK TABLES `dec` WRITE;
-/*!40000 ALTER TABLE `dec` DISABLE KEYS */;
-/*!40000 ALTER TABLE `dec` ENABLE KEYS */;
+LOCK TABLES `decm` WRITE;
+/*!40000 ALTER TABLE `decm` DISABLE KEYS */;
+INSERT INTO `decm` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',0),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
+/*!40000 ALTER TABLE `decm` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-27 14:16:44
+-- Dump completed on 2018-03-30 16:49:24

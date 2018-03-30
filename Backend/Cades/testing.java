@@ -1,4 +1,5 @@
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -10,22 +11,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class testing {
 
-	static private Statement st = makeconnection();
-	static private Connection con;
-
-	// Makes the connection and returns the statement
-	private static Statement makeconnection() {
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/salesdata", "root", "0000");
-			return con.createStatement();
-		} catch (Exception ex) {
-			System.out.println("Error: " + ex);
-		}
-		return null;
-	}
+	static private Statement st = connectionmanagment.getst();
+	static private Connection con=connectionmanagment.getcon();
 
 	// updates one day in the months database
 	// high order is most recent data where as loworder is previous
@@ -45,17 +35,17 @@ public class testing {
 			return false;
 		}
 	}
- 
+
 	// Retrieves avg for that day of the particular month
 	static float GetAvg(String month, String day) {
 		float total = 0;
 		int count = 0;
-		String query = "SELECT * FROM dailyinformation WHERE Date LIKE '" + month + "%' AND DayOfMonth = '" + day + "'";
+		String query = "SELECT * FROM " + month + " WHERE DayOfMonth LIKE '" + day + "'";
 		try {
 			ResultSet rs = st.executeQuery(query);
 
 			while (rs.next()) {
-				total += rs.getFloat("GrossSales");
+				total += rs.getFloat("AvgGrossSales");
 				count++;
 			}
 		} catch (SQLException e) {
@@ -63,32 +53,41 @@ public class testing {
 		}
 		if (count == 0)
 			return 0;
+		System.out.println(total/count);
 		return total / count;
 
 	}
 
-	//calls the getavg function with the strings formatted the proper way
-	static float frontGetAvg(String date, String day1) {
-		String month= WhatMonth(date);
-		String day=formatday(day1);
+	public static String getNumDay(String date, String day1){
+
+		String day = formatday(day1);
 		String[] dayof = date.split("/");
-		day=dayofmonth(Integer.parseInt(dayof[1]))+day;
+		day = dayofmonth(Integer.parseInt(dayof[1]))+ day;
+		return day;
+	}
+
+	//calls the getavg function with the strings formatted the proper way
+	public static float frontGetAvg(String date, String day1) {
+		String month= WhatMonth(date);
+		String day = getNumDay(date, day1);
+		System.out.println(day + " " + month);
+		System.out.println(GetAvg(month,day));
 		return GetAvg(month,day);
 	}
-	
+
 	//finds the month
-	static String WhatMonth(String date) {
+	public static String WhatMonth(String date) {
 		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
 		String[] day = date.split("/");
-		return monthname[Integer.parseInt(day[0])];
+		return monthname[Integer.parseInt(day[0])-1];
 	}
-	
+
 	//formats day properly
-	static String formatday(String day) {
+	public static String formatday(String day) {
 		String correct=day.toLowerCase();
-		return correct.substring(0,2);
+		return correct.substring(0,3);
 	}
-	
+
 	// fills arraylist for local use
 	ArrayList<dailyavg> filllist() {
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
@@ -124,7 +123,7 @@ public class testing {
 	}
 
 	// find which day of the month it is ie: 1mon 2mon
-	static int dayofmonth(int day) {
+	public static int dayofmonth(int day) {
 		if (day < 7)
 			return 1;
 		if (day < 14)
@@ -187,26 +186,29 @@ public class testing {
 	}
 
 	public static void main(String[] args) {
-		CSVupdate("C:\\Users\\cadew\\OneDrive\\Documents\\GitHub\\Software2project\\DataImport.csv");
-		testing blah=new testing();
-		boolean worked = false;
-		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
-		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
-		hold = blah.filllist();
-		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
-		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decem"};
-		Runtime r=Runtime.getRuntime();
-		float total = 0;
-		int count = 0;
-			for (int x = 0; x < 12; x++) {
-				r.gc();
-				for (int z = 1; z <= 5; z++)
-					for (int y = 0; y <= 6; y++) {
-						float avg= blah.GetAvg(months[x],z+days[y]);
-						dailyavg temp=hold.get((z*(y+1))-1);
-						//System.out.println(avg + " " + temp.grosssales);
-						worked=blah.UpdateOneDay(monthname[x],avg,z+days[y],temp.grosssales);
-					}			}	
+		System.out.println(frontGetAvg("01/25/2019","fri"));
+//		CSVupdate("C:\\Users\\Mayur Bhakta\\Documents\\GitHub\\Software2project\\DataImport.csv");
+//		testing blah=new testing();
+//		boolean worked = false;
+//		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
+//		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
+//		hold = blah.filllist();
+//		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
+//		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
+//		Runtime r=Runtime.getRuntime();
+//		float total = 0;
+//		int count = 0;
+//		for (int x = 0; x < 12; x++) {
+//			r.gc();
+//			for (int z = 1; z <= 5; z++)
+//				for (int y = 0; y <= 6; y++) {
+//					float avg= blah.GetAvg(months[x],z+days[y]);
+//					dailyavg temp=hold.get((z*(y+1))-1);
+//					//System.out.println(avg + " " + temp.grosssales);
+//					worked=blah.UpdateOneDay(monthname[x],avg,z+days[y],temp.grosssales);
+//				}			}
 	}
 
 }
+
+
