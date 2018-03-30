@@ -1,5 +1,6 @@
 package frontend;
 
+import Encryption.passQL;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,15 +23,27 @@ import java.util.ResourceBundle;
 
 public class createAccountController implements Initializable {
 
+    private DBconnection dc;
+    ObservableList list = FXCollections.observableArrayList();
+
+    //Declaration of variables in the GUI, in order to be able to access them
+    @FXML
+    private TextField userID;
+    @FXML
+    private PasswordField password1;
+    @FXML
+    private PasswordField password2;
+    @FXML
+    private ChoiceBox<String> Role;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         dc = new DBconnection();
         loadData();
     }
 
-    public createAccountController() {
-    }
-
+    //Method assign to the back button in the create account page so when clicked
+    // it will go back to the homepage
     public void goHomePageAction(ActionEvent event) throws IOException {
         Parent createParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Scene createScene = new Scene(createParent);
@@ -41,6 +54,8 @@ public class createAccountController implements Initializable {
         createStage.show();
     }
 
+    //Method assign to the log out button in the create account screen so when clicked
+    // it will return to the login screen.
     public void goLoginAction(ActionEvent event) throws IOException {
         Parent createParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
         Scene createScene = new Scene(createParent);
@@ -51,39 +66,43 @@ public class createAccountController implements Initializable {
         createStage.show();
     }
 
-    private DBconnection dc;
-    ObservableList list = FXCollections.observableArrayList();
-
-
-    @FXML private TextField userID;
-    @FXML private PasswordField password1;
-    @FXML private PasswordField password2;
-    @FXML private ChoiceBox<String> Role;
-    private void loadData()
-    {
+    //Method to load option in the choice
+    private void loadData() {
         list.removeAll(list);
         String a = "Choose a Role";
         String b = "Manager";
         String c = "Employee";
-        list.addAll(a,b,c);
+        list.addAll(a, b, c);
         Role.getItems().addAll(list);
         Role.setValue("Choose a Role");
     }
 
+    //Action method assigned to the create account button, so when clicked it will
+    // get username, password, and position from the user input and call a method,
+    // from the encryption package to encrypt the new password and store the info
+    // in the database.
+    public void createAccountButtonActionX(ActionEvent event) throws IOException {
 
+        //New instance object for accessing encryption methods
+        passQL create = new passQL();
 
-    private void createAccountButtonActionX(ActionEvent event) throws IOException {
-
+        //Get user input from the GUI
         String user = userID.getText();
         String pass1 = password1.getText();
         String pass2 = password2.getText();
+        String pos = Role.getValue();
+
+        //Check if any of the fields is empty and if it is prompt a message to the
+        // user telling them to fill all the fields
         if (user.isEmpty() || pass1.isEmpty() || pass2.isEmpty()) {
             System.out.println("Specify ALL account credentials");
         } else {
-            if (pass1.equals(pass2))
-            {
+            //Check if both password are the same
+            if (pass1.equals(pass2)) {
+                //Create connection to database
                 Connection con = dc.makeconnection();
-                String query = "INSERT INTO account VALUES (" + user + "," + pass1 + ")";
+                //Encryption method call
+                create.AddUser(user, pass1, pos);
             }
         }
 

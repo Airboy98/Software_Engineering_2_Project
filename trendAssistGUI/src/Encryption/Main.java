@@ -5,7 +5,7 @@ class Encrypt{
 
         passQL pass = new passQL();
 
-        if(pass.AddUser("hitler", "the_jew", "manager") != true)
+        if(pass.AddUser("mayur", "password", "manager") != true)
         {
             //enter new password
             System.out.println("Error in user creation, user already exist.");

@@ -63,43 +63,65 @@ public class GenSalePredController implements Initializable {
     }
 
 
-
+    //Method that will populate a bar graph based on user selection of dates he/she
+    // wants to check
     @FXML
     public void populateBarGraph(ActionEvent event) throws IOException {
 
-
-        XYChart.Series<String, Double> series = new XYChart.Series<>();
+        //Retrieve values from datepickers field in the GUI, and from the date
+        // retrieved get the day of the week for that specific date
         LocalDate ld = datePicker.getValue();
         String dayOfWeek = ld.getDayOfWeek().toString();
-
         LocalDate ld1 = datePicker1.getValue();
+        String dayOfWeek1 = ld1.getDayOfWeek().toString();
+
+
+        //A DateTimeFormatter instance to format the date to the way its stored
+        // in the database
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         String date = ld.format(formatter);
         String date1 = ld1.format(formatter);
-        System.out.println(date);
-        System.out.println(date1);
 
+
+
+        //Method call from the backend package to retrieve the average gross sales
+        // for a specific date, the convert the float value to string and set the
+        // the value of the Textfield in the GUI using the average
         float avg = testing.frontGetAvg(date, dayOfWeek);
-        System.out.println(avg);
         String value = String.valueOf(avg);
         Average.setText(value);
 
+        //Get the correct month name so we can use it to access the correct table
+        // in the database
+        String month = testing.WhatMonth(date);
+
+
+        String day = testing.getNumDay(date, dayOfWeek);
+        String day2 = testing.getNumDay(date1, dayOfWeek1);
+
+        System.out.println(day + "" + day2);
+
+
+    }
+
+    public void populateGraph() throws IOException {
+
+
+        //New instance of XYChart
+        XYChart.Series<String, Double> series = new XYChart.Series<>();
         try {
-            Connection con = dc.makeconnection();
-
-            PreparedStatement pstmt = con.prepareStatement("SELECT date, salescol FROM sales WHERE date >= ? AND date <= ?");
-            pstmt.setString(1, date);
-            pstmt.setString(2, date1);
-
+            Connection con = dc.makeconnection1();
+            PreparedStatement pstmt = con.prepareStatement("SELECT * FROM " + month + " WHERE DayOfMonth BETWEEN '" + day + "' AND '" + day2 +"'" );
             ResultSet rs = pstmt.executeQuery();
+            //Populate graph using database values
             while (rs.next()) {
                 series.getData().add(new XYChart.Data<>(rs.getString(1), rs.getDouble(2)));
+                System.out.println(rs.getDouble(2));
             }
             barChart.getData().add(series);
             loadDataFromDatabase();
         }catch (SQLException ex){
             System.err.println("Error"+ex);
         }
-
     }
 }

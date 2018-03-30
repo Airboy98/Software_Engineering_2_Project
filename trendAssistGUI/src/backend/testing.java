@@ -70,26 +70,32 @@ public class testing {
 
 	}
 
+	public static String getNumDay(String date, String day1){
+
+		String day = formatday(day1);
+		String[] dayof = date.split("/");
+		day = dayofmonth(Integer.parseInt(dayof[1]))+ day;
+		return day;
+	}
+
 	//calls the getavg function with the strings formatted the proper way
 	public static float frontGetAvg(String date, String day1) {
 		String month= WhatMonth(date);
-		String day=formatday(day1);
-		String[] dayof = date.split("/");
-		day=dayofmonth(Integer.parseInt(dayof[1]))+day;
+		String day = getNumDay(date, day1);
 		System.out.println(day + " " + month);
 		System.out.println(GetAvg(month,day));
 		return GetAvg(month,day);
 	}
 
 	//finds the month
-	static String WhatMonth(String date) {
+	public static String WhatMonth(String date) {
 		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
 		String[] day = date.split("/");
 		return monthname[Integer.parseInt(day[0])-1];
 	}
 
 	//formats day properly
-	static String formatday(String day) {
+	public static String formatday(String day) {
 		String correct=day.toLowerCase();
 		return correct.substring(0,3);
 	}
@@ -129,7 +135,7 @@ public class testing {
 	}
 
 	// find which day of the month it is ie: 1mon 2mon
-	static int dayofmonth(int day) {
+	public static int dayofmonth(int day) {
 		if (day < 7)
 			return 1;
 		if (day < 14)

@@ -28,5 +28,17 @@ public class DBconnection {
         return null;
     }
 
+
+    public Connection makeconnection1() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/salesdata", "root", "0000");
+            return con;
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex);
+        }
+        return null;
+    }
+
     //this class hands the inventory table in the database
 }

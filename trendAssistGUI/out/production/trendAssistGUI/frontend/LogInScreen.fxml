@@ -21,9 +21,9 @@
                       <children>
                         <AnchorPane layoutX="334.0" layoutY="26.0" prefHeight="341.0" prefWidth="230.0" style="-fx-background-color: #FF5733;">
                            <children>
-                              <TextField id="userID" fx:id="userID" alignment="CENTER" layoutX="41.0" layoutY="87.0" promptText="Username" />
-                                <PasswordField id="pass" fx:id="passID" alignment="CENTER" layoutX="41.0" layoutY="158.0" promptText="Password" />
-                                <Button contentDisplay="TOP" layoutX="89.0" layoutY="270.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Sign In">
+                              <TextField id="userID" fx:id="userID" alignment="TOP_CENTER" layoutX="22.0" layoutY="87.0" promptText="Username" />
+                                <PasswordField id="pass" fx:id="passID" alignment="CENTER" layoutX="22.0" layoutY="132.0" promptText="Password" />
+                                <Button contentDisplay="TOP" layoutX="82.0" layoutY="220.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Sign In">
                                  <effect>
                                     <Blend />
                                  </effect>

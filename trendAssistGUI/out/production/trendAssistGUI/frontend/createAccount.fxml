@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.createAccountController">
    <children>
-      <Button fx:id="createAccountButton" alignment="CENTER" layoutX="224.0" layoutY="303.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="153.0" style="-fx-background-color: ff5733;" text="Create Account" textFill="WHITE">
+      <Button fx:id="createAccountButton" alignment="CENTER" layoutX="224.0" layoutY="303.0" mnemonicParsing="false" onAction="#createAccountButtonActionX" prefHeight="55.0" prefWidth="153.0" style="-fx-background-color: ff5733;" text="Create Account" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Button>
