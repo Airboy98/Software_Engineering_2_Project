@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: salesdata
+-- Host: localhost    Database: accounts
 -- ------------------------------------------------------
 -- Server version	5.7.21-log
 
@@ -16,27 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `decm`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `decm`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `decm` (
-  `DayOfMonth` varchar(45) NOT NULL,
-  `AvgGrossSales` double NOT NULL,
-  PRIMARY KEY (`DayOfMonth`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `users` (
+  `CustomerID` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `passhash` varchar(100) DEFAULT NULL,
+  `position` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`CustomerID`,`username`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `decm`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `decm` WRITE;
-/*!40000 ALTER TABLE `decm` DISABLE KEYS */;
-INSERT INTO `decm` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',0),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
-/*!40000 ALTER TABLE `decm` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (23,'jimmy','91 -12 80 24 -8 29 -104 -112 -74 13 33 -91 -91 -63 45 -91 ','Employee'),(24,'hitler','91 -106 47 -27 100 24 -68 -18 -96 106 -41 -21 64 75 124 -111 ','Manager'),(31,'mayur','41 0 35 38 -112 8 -102 -106 -3 7 -81 74 -115 -27 -97 -122 ','Manager'),(32,'carolyn','66 -123 -75 117 -79 -42 -72 13 38 72 -52 -114 113 72 -127 84 ','Employee');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-30 18:08:28
+-- Dump completed on 2018-03-30 18:08:30
