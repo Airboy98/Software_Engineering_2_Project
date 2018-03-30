@@ -38,6 +38,7 @@ CREATE TABLE `dailyinformation` (
 
 LOCK TABLES `dailyinformation` WRITE;
 /*!40000 ALTER TABLE `dailyinformation` DISABLE KEYS */;
+INSERT INTO `dailyinformation` VALUES ('01/25/2018','Thu','4','4thu',2145.5),('01/26/2018','Fri','4','4fri',6007),('01/27/2018','Sat','4','4sat',450),('01/28/2018','Sun','4','4sun',690),('01/29/2018','Mon','5','5mon',850),('06/24/2018','Wed','24','4wed',1197.5),('08/23/2018','Tue','32','4tue',796.5),('11/22/2018','Mon','44','4mon',566.8300170898438);
 /*!40000 ALTER TABLE `dailyinformation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-27 14:16:43
+-- Dump completed on 2018-03-30 16:49:28
