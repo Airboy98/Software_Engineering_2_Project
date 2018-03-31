@@ -36,6 +36,17 @@ public class HomePageController {
         predStage.show();
     }
 
+    public void accountSettingsButtonAction(ActionEvent event) throws IOException {
+        Parent accParent = FXMLLoader.load(getClass().getResource("AccountSettings.fxml"));
+        Scene accScene = new Scene(accParent);
+        Stage accStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        accStage.hide();
+        accStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+        accStage.setScene(accScene);
+        accStage.setTitle("Account Settings");
+        accStage.show();
+    }
+
     public void logout(ActionEvent event) throws IOException {
         Parent logoutParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
         Scene logoutScene = new Scene(logoutParent);

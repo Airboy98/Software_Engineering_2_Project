@@ -20,7 +20,7 @@ public class DBconnection {
     public Connection makeconnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "0000");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accounts", "root", "0000");
             return con;
         } catch (Exception ex) {
             System.out.println("Error: " + ex);

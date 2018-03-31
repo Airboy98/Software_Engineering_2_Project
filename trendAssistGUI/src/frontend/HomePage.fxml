@@ -25,7 +25,7 @@
                </input>
             </DisplacementMap>
          </effect></Button>
-      <Button layoutX="26.0" layoutY="226.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Account Settings" textFill="WHITE">
+      <Button layoutX="26.0" layoutY="226.0" mnemonicParsing="false" onAction="#accountSettingsButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Account Settings" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
