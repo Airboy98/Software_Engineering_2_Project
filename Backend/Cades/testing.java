@@ -103,11 +103,19 @@ public class testing {
 			for (int y = 1; y <= 7; y++) {
 				String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
 				float total = 0;
+				float fst=0;
 				int count = 0;
+				int first = 0;
 				String query = "SELECT * FROM dailyinformation WHERE DayOfMonth = '" + x + days[y - 1] + "'";
 				System.out.println(x+days[y-1]);
 				try {
 					ResultSet rs = st.executeQuery(query);
+//					if (first == 0){
+//						rs.next();
+//						fst=rs.getFloat("GrossSales");
+//						first++;
+//					}
+//					else
 					while (rs.next()) {
 						total = rs.getFloat("GrossSales");
 						System.out.println(total);
@@ -117,10 +125,12 @@ public class testing {
 					if (count != 0) {
 						temp.day = x + days[y - 1];
 						temp.grosssales = (total / count);
+						temp.grosssales = (temp.grosssales + fst * 3)/4;
 					} else {
 						temp.day = x + days[y - 1];
 						temp.grosssales = 0;
 					}
+					
 					//System.out.println(temp.grosssales);
 					hold.add(temp);
 					//System.out.println(temp.grosssales);
@@ -215,6 +225,16 @@ public class testing {
 				for (int z = 1; z <= 5; z++)
 					for (int y = 0; y <= 6; y++) {
 						float avg= blah.GetAvg(monthname[x],z+days[y]);
+						String query = "SELECT * FROM dailyinformation WHERE Date LIKE '"+months[x] + "%' AND DayOfMonth = '" + z+days[y]+"'";
+						try{
+							ResultSet rs=st.executeQuery(query);
+							if (rs.next())
+							avg=rs.getFloat("GrossSales");
+						}catch (SQLException e){
+							System.out.println(e);
+							
+						}
+						
 						dailyavg temp=hold.get((z*(y+1))-1);
 						System.out.println(temp.grosssales);
 						worked=blah.UpdateOneDay(monthname[x],avg,z+days[y],temp.grosssales);
