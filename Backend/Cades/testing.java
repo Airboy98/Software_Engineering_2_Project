@@ -125,7 +125,7 @@ public class testing {
 					if (count != 0) {
 						temp.day = x + days[y - 1];
 						temp.grosssales = (total / count);
-						temp.grosssales = (temp.grosssales + fst * 3)/4;
+						//temp.grosssales = (temp.grosssales + fst * 3)/4;
 					} else {
 						temp.day = x + days[y - 1];
 						temp.grosssales = 0;
@@ -220,6 +220,7 @@ public class testing {
 		Runtime r=Runtime.getRuntime();
 		float total = 0;
 		int count = 0;
+		float checker = 0;
 			for (int x = 0; x < 12; x++) {
 				r.gc();
 				for (int z = 1; z <= 5; z++)
@@ -229,7 +230,9 @@ public class testing {
 						try{
 							ResultSet rs=st.executeQuery(query);
 							if (rs.next())
-							avg=rs.getFloat("GrossSales");
+							checker=rs.getFloat("GrossSales");
+							if (checker > 0)
+								avg = checker;
 						}catch (SQLException e){
 							System.out.println(e);
 							
