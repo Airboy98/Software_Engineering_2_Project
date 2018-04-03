@@ -3,13 +3,20 @@ package frontend;
 import Encryption.PasswordENC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -124,10 +131,33 @@ public class AccountSettingsController implements Initializable {
             e.printStackTrace();
         }
         loadDataFromDatabase();
-
-
     }
 
+    //Method assign to the back button in the create account page so when clicked
+    // it will go back to the homepage
+    public void goHomePageAction(ActionEvent event) throws IOException {
+        Parent hpParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Scene hpScene = new Scene(hpParent);
+        Stage hpStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        hpStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+        hpStage.setScene(hpScene);
+        hpStage.setTitle("Back");
+        hpStage.hide();
+        hpStage.show();
+    }
+
+    //Method assign to the log out button in the create account screen so when clicked
+    // it will return to the login screen.
+    public void goLoginAction(ActionEvent event) throws IOException {
+        Parent createParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+        Scene createScene = new Scene(createParent);
+        Stage createStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+        createStage.setScene(createScene);
+        createStage.setTitle("Log Out");
+        createStage.hide();
+        createStage.show();
+    }
 
 
 }

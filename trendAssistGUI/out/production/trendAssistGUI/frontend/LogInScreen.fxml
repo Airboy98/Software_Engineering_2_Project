@@ -23,7 +23,7 @@
                            <children>
                               <TextField id="userID" fx:id="userID" alignment="TOP_CENTER" layoutX="22.0" layoutY="87.0" promptText="Username" />
                                 <PasswordField id="pass" fx:id="passID" alignment="CENTER" layoutX="22.0" layoutY="132.0" promptText="Password" />
-                                <Button contentDisplay="TOP" layoutX="82.0" layoutY="220.0" mnemonicParsing="false" onAction="#logInButtonAction" text="Sign In">
+                                <Button contentDisplay="TOP" layoutX="82.0" layoutY="220.0" mnemonicParsing="false" onAction="#logInButtonAction" onKeyReleased="#logInButtonAction" text="Sign In">
                                  <effect>
                                     <Blend />
                                  </effect>
