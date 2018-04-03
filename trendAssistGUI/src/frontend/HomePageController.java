@@ -54,7 +54,7 @@ public class HomePageController {
         logoutStage.hide();
         logoutStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         logoutStage.setScene(logoutScene);
-        logoutStage.setTitle("Log Out");
+        logoutStage.setTitle("trendAssist");
         logoutStage.show();
     }
 

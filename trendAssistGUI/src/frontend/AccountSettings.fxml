@@ -27,8 +27,8 @@
         <TextField fx:id="pos" layoutX="420.0" layoutY="457.0" promptText="Position" />
         <Button fx:id="update" layoutX="579.0" layoutY="457.0" mnemonicParsing="false" onAction="#updateAccount" text="Update" />
         <Button fx:id="delete" layoutX="652.0" layoutY="457.0" mnemonicParsing="false" onAction="#deleteAccount" text="Delete" />
-        <Button fx:id="back" layoutX="14.0" layoutY="505.0" mnemonicParsing="false" text="Back" />
-        <Button fx:id="logout" layoutX="732.0" layoutY="14.0" mnemonicParsing="false" text="LogOut" />
+        <Button fx:id="back" layoutX="14.0" layoutY="505.0" mnemonicParsing="false" onAction="#goHomePageAction" text="Back" />
+        <Button fx:id="logout" layoutX="732.0" layoutY="14.0" mnemonicParsing="false" onAction="#goLoginAction" text="LogOut" />
         <Button layoutX="657.0" layoutY="419.0" mnemonicParsing="false" onAction="#loadDataFromDatabase" text="Load" />
     </children>
 </AnchorPane>
