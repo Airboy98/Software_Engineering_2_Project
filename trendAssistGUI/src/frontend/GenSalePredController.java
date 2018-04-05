@@ -12,10 +12,7 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
@@ -56,65 +53,72 @@ public class GenSalePredController implements Initializable {
         //Retrieve values from datepickers field in the GUI, and from the date
         // retrieved get the day of the week for that specific date
         LocalDate ld = datePicker.getValue();
-        String dayOfWeek = ld.getDayOfWeek().toString();
         Integer d1 = ld.getDayOfYear();
+        Integer y1 = ld.getYear();
 
         LocalDate ld1 = datePicker1.getValue();
         Integer d2 = ld1.getDayOfYear();
+        Integer y2 = ld1.getYear();
 
         //A DateTimeFormatter instance to format the date to the way its stored
         // in the database
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
+        if (y2 - y1 < 0) {
+            Alert errorMessage = new Alert(Alert.AlertType.ERROR);
+            errorMessage.setTitle("Incorrect Date");
+            errorMessage.setContentText("Please input correct dates!");
+            errorMessage.setHeaderText(null);
+            errorMessage.showAndWait();
+        } else {
+            LocalDate temp[] = new LocalDate[(d2 - d1) + 1];
+            String x[] = new String[(d2 - d1) + 1];
+            String y[] = new String[(d2 - d1) + 1];
+            String dow[] = new String[(d2 - d1) + 1];
+            String z[] = new String[(d2 - d1) + 1];
+            float w[] = new float[(d2 - d1) + 1];
 
-        LocalDate temp[] = new LocalDate[(d2-d1)+1];
-        String x[] = new String[(d2-d1)+1];
-        String y[] = new String[(d2-d1)+1];
-        String dow[] = new String[(d2-d1)+1];
-        String z[] = new String[(d2-d1)+1];
-        float w[] = new float[(d2-d1)+1];
-
-        for(int i = 0; i <=(d2-d1); i++) {
-            temp[i] = ld.plusDays(i);
-            dow[i] = temp[i].getDayOfWeek().toString();
-            x[i] = temp[i].format(formatter);
-            y[i] = testing.WhatMonth(x[i]);
-            z[i] = testing.getNumDay(x[i], dow[i]);
-            w[i] = testing.frontGetAvg(x[i], dow[i]);
-        }
+            for (int i = 0; i <= (d2 - d1); i++) {
+                temp[i] = ld.plusDays(i);
+                dow[i] = temp[i].getDayOfWeek().toString();
+                x[i] = temp[i].format(formatter);
+                y[i] = testing.WhatMonth(x[i]);
+                z[i] = testing.getNumDay(x[i], dow[i]);
+                w[i] = testing.frontGetAvg(x[i], dow[i]);
+            }
 
 
-        XYChart.Series<String, Float> series = new XYChart.Series<>();
-        float sum = 0;
-        try {
-            Connection con = dc.makeconnection1();
-            data = FXCollections.observableArrayList();
-            Integer p = 0;
-            barChart.getData().clear();
-            while(p <= (d2-d1)) {
-                PreparedStatement pstmt = con.prepareStatement("SELECT * FROM " + y[p] + " WHERE DayOfMonth = '" + z[p] + "'");
+            XYChart.Series<String, Float> series = new XYChart.Series<>();
+            float sum = 0;
+            try {
+                Connection con = dc.makeconnection1();
+                data = FXCollections.observableArrayList();
+                Integer p = 0;
+                barChart.getData().clear();
+                while (p <= (d2 - d1)) {
+                    PreparedStatement pstmt = con.prepareStatement("SELECT * FROM " + y[p] + " WHERE DayOfMonth = '" + z[p] + "'");
 
-                pstmt.executeQuery();
-                //Populate graph using database values
+                    pstmt.executeQuery();
+                    //Populate graph using database values
 
                     series.getData().add(new XYChart.Data<>(x[p], w[p]));
                     data.add(new SalesDetails(x[p], w[p]));
                     sum += w[p];
-                p++;
+                    p++;
+                }
+
+                String value = String.valueOf(sum / p);
+                Average.setText(value);
+                barChart.getData().add(series);
+
+            } catch (SQLException ex) {
+                System.err.println("Error" + ex);
             }
-
-            String value = String.valueOf(sum/p);
-            Average.setText(value);
-            barChart.getData().add(series);
-
-        }catch (SQLException ex){
-            System.err.println("Error"+ex);
+            columnDate.setCellValueFactory(new PropertyValueFactory<SalesDetails, String>("Date"));
+            columnAvgSales.setCellValueFactory(c ->
+                    new ReadOnlyObjectWrapper<Float>(c.getValue().getAvgSales()));
+            table.setItems(null);
+            table.setItems(data);
         }
-        columnDate.setCellValueFactory(new PropertyValueFactory<SalesDetails, String>("Date"));
-        columnAvgSales.setCellValueFactory(c ->
-                new ReadOnlyObjectWrapper<Float>( c.getValue().getAvgSales()) );
-        table.setItems(null);
-        table.setItems(data);
     }
-
 }

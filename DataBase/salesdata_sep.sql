@@ -35,7 +35,7 @@ CREATE TABLE `sep` (
 
 LOCK TABLES `sep` WRITE;
 /*!40000 ALTER TABLE `sep` DISABLE KEYS */;
-INSERT INTO `sep` VALUES ('1fri',560.5969),('1mon',295.53165),('1sat',390.17316),('1sun',37.94869),('1thu',158.72548),('1tue',66.031296),('1wed',177.2154),('2fri',58.376328),('2mon',66.031296),('2sat',291.3061),('2sun',81.83046),('2thu',51.210587),('2tue',158.72548),('2wed',390.17316),('3fri',41.929657),('3mon',177.2154),('3sat',146.3653),('3sun',56.439568),('3thu',291.3061),('3tue',390.17316),('3wed',92.39201),('4fri',389.00763),('4mon',158.72548),('4sat',84.04637),('4sun',50.99475),('4thu',75.600006),('4tue',51.210587),('4wed',291.3061),('5fri',134.79651),('5mon',560.5969),('5sat',294.91772),('5sun',276.15442),('5thu',389.00763),('5tue',58.376328),('5wed',41.929657);
+INSERT INTO `sep` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',0),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
 /*!40000 ALTER TABLE `sep` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-31 15:17:35
+-- Dump completed on 2018-03-30 16:49:25

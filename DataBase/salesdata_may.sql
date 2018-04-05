@@ -35,7 +35,7 @@ CREATE TABLE `may` (
 
 LOCK TABLES `may` WRITE;
 /*!40000 ALTER TABLE `may` DISABLE KEYS */;
-INSERT INTO `may` VALUES ('1fri',9125.9375),('1mon',768.3542),('1sat',4595.797),('1sun',37.94869),('1thu',2128.0898),('1tue',1048.6133),('1wed',806.9219),('2fri',6034.9727),('2mon',569.3633),('2sat',7158.707),('2sun',401.52734),('2thu',2004.7773),('2tue',1827.9023),('2wed',1255.8594),('3fri',6824.5703),('3mon',848.5469),('3sat',9268.109),('3sun',334.63437),('3thu',2946.707),('3tue',1766.0469),('3wed',1106.3945),('4fri',4330.543),('4mon',630.52734),('4sat',6120.504),('4sun',1506.3438),('4thu',2917.7734),('4tue',1220.2773),('4wed',1242.5195),('5fri',134.79651),('5mon',152.1875),('5sat',294.91772),('5sun',276.15442),('5thu',389.00763),('5tue',976.59766),('5wed',656.0078);
+INSERT INTO `may` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',0),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
 /*!40000 ALTER TABLE `may` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-31 15:17:36
+-- Dump completed on 2018-03-30 16:49:27
