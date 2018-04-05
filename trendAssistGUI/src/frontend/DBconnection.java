@@ -1,5 +1,3 @@
-package frontend;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -19,7 +17,7 @@ public class DBconnection {
     // Makes the connection and returns the statement
     public Connection makeconnection() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/accounts", "root", "0000");
             return con;
         } catch (Exception ex) {
@@ -31,7 +29,7 @@ public class DBconnection {
 
     public Connection makeconnection1() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/salesdata", "root", "0000");
             return con;
         } catch (Exception ex) {
