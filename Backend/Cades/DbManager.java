@@ -13,8 +13,8 @@ import java.util.Scanner;
 
 public class DbManager {
 
-	static private Statement st = connectionmanagment.getst();
-	static private Connection con=connectionmanagment.getcon();
+	static private Statement st = DBconnection.getstsa();
+	static private Connection con=DBconnection.getconsa();
 
 	// updates one day in the months database with name month ex jan
 	// high order is most recent data where as loworder is previous
@@ -157,13 +157,18 @@ public class DbManager {
 
 	// inserts into dailyinformation table
 	//date is formated as MM/DD/YYYY
-	private static boolean IntoDaily(String date, String dayofweek, String dayofyear, String dayofmonth, float GrossSales) {
+	private static boolean IntoDaily(String date, String dayofweek, float GrossSales) {
+		String dayofmonth= getNumDay(date,dayofweek) + formatday(dayofweek);
+		String array[]=date.split("/");
+		int temp = Integer.parseInt(array[0]) * dayofmonth(Integer.parseInt(array[1]));
+		String dayofyear= Integer.toString(temp);
+		
 		if (GrossSales == 0) return true;
 		try {
 			String query = "INSERT INTO dailyinformation SET Date=?,DayOfWeek=?,DayOfYearByWeek=?,DayOfMonth=?,GrossSales=? ON DUPLICATE KEY UPDATE DayOfWeek=VALUES(DayOfWeek),DayOfYearByWeek=VALUES(DayOfYearByWeek),DayOfMonth=VALUES(DayOfMonth),GrossSales=VALUES(GrossSales)";
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, date);
-			ps.setString(2, dayofweek.substring(0, 3));
+			ps.setString(2, formatday(dayofweek));
 			ps.setString(3, dayofyear);
 			ps.setString(4, dayofmonth.substring(0, 4));
 			ps.setDouble(5, GrossSales);
@@ -198,7 +203,7 @@ public class DbManager {
 				DayOfYearByWeek = dayofmonth(dayval) * Integer.parseInt(day[0]);
 				System.out.println(array1[1]);
 				float grossales = Float.parseFloat(array1[1]);
-				boolean ok = IntoDaily(array1[0], array1[2], Integer.toString(DayOfYearByWeek), DayOfMonth.toLowerCase(), grossales);
+				boolean ok = IntoDaily(array1[0], array1[2], grossales);
 			}
 			scanner.close();
 			return true;
@@ -210,8 +215,8 @@ public class DbManager {
 	}
 
 	//updates an entire month for the new data input
-	public static boolean MonthUpdate(String month) {
-		
+	public static boolean MonthUpdate(String date) {
+		String month=WhatMonth(date);
 		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
 		hold = DbManager.filllist();
