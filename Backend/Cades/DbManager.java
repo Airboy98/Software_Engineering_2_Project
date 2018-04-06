@@ -27,7 +27,7 @@ public class DbManager {
 			PreparedStatement ps = con.prepareStatement(query1);
 			ps.setString(1, day);
 			ps.setFloat(2, ((highorder) * 3 + loworder) / 4);
-			System.out.println(month + " " + day + " " + ((highorder) * 3 + loworder) / 4);
+			//System.out.println(month + " " + day + " " + ((highorder) * 3 + loworder) / 4);
 			ps.executeUpdate();
 			return true;
 		} catch (SQLException e) {
@@ -50,6 +50,7 @@ public class DbManager {
 				total += rs.getFloat("AvgGrossSales");
 				count++;
 			}
+			rs.close();
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
@@ -107,7 +108,7 @@ public class DbManager {
 				int count = 0;
 				int first = 0;
 				String query = "SELECT * FROM dailyinformation WHERE DayOfMonth = '" + x + days[y - 1] + "'";
-				System.out.println(x+days[y-1]);
+				//System.out.println(x+days[y-1]);
 				try {
 					ResultSet rs = st.executeQuery(query);
 //					if (first == 0){
@@ -118,9 +119,10 @@ public class DbManager {
 //					else
 					while (rs.next()) {
 						total = rs.getFloat("GrossSales");
-						System.out.println(total);
+						//System.out.println(total);
 						count++;
 					}
+					
 					dailyavg temp = new dailyavg();
 					if (count != 0) {
 						temp.day = x + days[y - 1];
@@ -134,10 +136,12 @@ public class DbManager {
 					//System.out.println(temp.grosssales);
 					hold.add(temp);
 					//System.out.println(temp.grosssales);
+					rs.close();
 				} catch (SQLException e) {
 					System.out.println(e);
 				}
 			}
+		
 		return hold;
 	}
 
@@ -216,7 +220,9 @@ public class DbManager {
 
 	//updates an entire month for the new data input
 	public static boolean MonthUpdate(String date) {
-		String month=WhatMonth(date);
+		String month = WhatMonth(date);
+		String array[]=date.split("/");
+		System.out.println(month);
 		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
 		hold = DbManager.filllist();
@@ -228,27 +234,49 @@ public class DbManager {
 		for (int z = 1; z <= 5; z++)
 			for (int y = 0; y <= 6; y++) {
 				float avg= DbManager.GetAvg(month,z+days[y]);
-				String query = "SELECT * FROM dailyinformation WHERE Date LIKE '"+month + "%' AND DayOfMonth = '" + z+days[y]+"'";
+				String query = "SELECT * FROM "+month+" WHERE DayOfMonth = '" + z+days[y]+"'";
+				//System.out.println(z+days[y]);
+				float high=0;
 				try{
-					ResultSet rs=st.executeQuery(query);
 					avg= DbManager.GetAvg(month,z+days[y]);
+					ResultSet rs=st.executeQuery(query);
+					//System.out.println("Hello");
 					if (rs.next())
-					checker=rs.getFloat("GrossSales");
+						checker=rs.getFloat("AvgGrossSales");
+					rs.close();
 					if (checker > 0)
 						avg = checker;
 				}catch (SQLException e){
 					System.out.println(e);
+					//continue;
 					return false;
 					
 				}
-				dailyavg temp=hold.get((z*(y+1))-1);
-				System.out.println(temp.grosssales);
-				DbManager.UpdateOneDay(month,avg,z+days[y],temp.grosssales);
+				query = new String();
+				query="SELECT * FROM dailyinformation WHERE Date LIKE '" + array[0] + "%' AND DayOfMonth = '"+z+days[y]+"'";
+				System.out.println(array[0]);
+				try {
+					ResultSet rs=st.executeQuery(query);
+					if(rs.next()) {
+						high=rs.getFloat("GrossSales");
+						DbManager.UpdateOneDay(month,high,z+days[y],avg);
+						System.out.println(high);
+					}
+					rs.close();
+				}catch(SQLException e) {
+					System.out.println(e);
+				}
+				
+				
+				//System.out.println(temp.grosssales);
+				DbManager.UpdateOneDay(month,high,z+days[y],avg);
+				
 	}
 	return true;	
 	}
 	
 	//todo: update every year
-	
+
+
 }
 
