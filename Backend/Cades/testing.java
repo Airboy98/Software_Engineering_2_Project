@@ -1,5 +1,3 @@
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -14,8 +12,8 @@ import java.util.Scanner;
 
 public class testing {
 
-	static private Statement st = connectionmanagment.getst();
-	static private Connection con=connectionmanagment.getcon();
+	static private Statement st = DBconnection.getstsa();
+	static private Connection con=DBconnection.getconsa();
 
 	// updates one day in the months database with name month ex jan
 	// high order is most recent data where as loworder is previous
@@ -28,7 +26,7 @@ public class testing {
 			PreparedStatement ps = con.prepareStatement(query1);
 			ps.setString(1, day);
 			ps.setFloat(2, ((highorder) * 3 + loworder) / 4);
-			System.out.println(month + " " + day + " " + ((highorder) * 3 + loworder) / 4);
+			//System.out.println(month + " " + day + " " + ((highorder) * 3 + loworder) / 4);
 			ps.executeUpdate();
 			return true;
 		} catch (SQLException e) {
@@ -51,6 +49,7 @@ public class testing {
 				total += rs.getFloat("AvgGrossSales");
 				count++;
 			}
+			rs.close();
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
@@ -108,7 +107,7 @@ public class testing {
 				int count = 0;
 				int first = 0;
 				String query = "SELECT * FROM dailyinformation WHERE DayOfMonth = '" + x + days[y - 1] + "'";
-				System.out.println(x+days[y-1]);
+				//System.out.println(x+days[y-1]);
 				try {
 					ResultSet rs = st.executeQuery(query);
 //					if (first == 0){
@@ -119,9 +118,10 @@ public class testing {
 //					else
 					while (rs.next()) {
 						total = rs.getFloat("GrossSales");
-						System.out.println(total);
+						//System.out.println(total);
 						count++;
 					}
+					
 					dailyavg temp = new dailyavg();
 					if (count != 0) {
 						temp.day = x + days[y - 1];
@@ -135,10 +135,12 @@ public class testing {
 					//System.out.println(temp.grosssales);
 					hold.add(temp);
 					//System.out.println(temp.grosssales);
+					rs.close();
 				} catch (SQLException e) {
 					System.out.println(e);
 				}
 			}
+		
 		return hold;
 	}
 
@@ -158,13 +160,18 @@ public class testing {
 
 	// inserts into dailyinformation table
 	//date is formated as MM/DD/YYYY
-	private static boolean IntoDaily(String date, String dayofweek, String dayofyear, String dayofmonth, float GrossSales) {
+	private static boolean IntoDaily(String date, String dayofweek, float GrossSales) {
+		String dayofmonth= getNumDay(date,dayofweek) + formatday(dayofweek);
+		String array[]=date.split("/");
+		int temp = Integer.parseInt(array[0]) * dayofmonth(Integer.parseInt(array[1]));
+		String dayofyear= Integer.toString(temp);
+		
 		if (GrossSales == 0) return true;
 		try {
 			String query = "INSERT INTO dailyinformation SET Date=?,DayOfWeek=?,DayOfYearByWeek=?,DayOfMonth=?,GrossSales=? ON DUPLICATE KEY UPDATE DayOfWeek=VALUES(DayOfWeek),DayOfYearByWeek=VALUES(DayOfYearByWeek),DayOfMonth=VALUES(DayOfMonth),GrossSales=VALUES(GrossSales)";
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, date);
-			ps.setString(2, dayofweek.substring(0, 3));
+			ps.setString(2, formatday(dayofweek));
 			ps.setString(3, dayofyear);
 			ps.setString(4, dayofmonth.substring(0, 4));
 			ps.setDouble(5, GrossSales);
@@ -199,7 +206,7 @@ public class testing {
 				DayOfYearByWeek = dayofmonth(dayval) * Integer.parseInt(day[0]);
 				System.out.println(array1[1]);
 				float grossales = Float.parseFloat(array1[1]);
-				boolean ok = IntoDaily(array1[0], array1[2], Integer.toString(DayOfYearByWeek), DayOfMonth.toLowerCase(), grossales);
+				boolean ok = IntoDaily(array1[0], array1[2], grossales);
 			}
 			scanner.close();
 			return true;
@@ -211,8 +218,10 @@ public class testing {
 	}
 
 	//updates an entire month for the new data input
-	public static boolean MonthUpdate(String month) {
-		
+	public static boolean MonthUpdate(String date) {
+		String month = WhatMonth(date);
+		String array[]=date.split("/");
+		System.out.println(month);
 		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
 		hold = testing.filllist();
@@ -224,46 +233,71 @@ public class testing {
 		for (int z = 1; z <= 5; z++)
 			for (int y = 0; y <= 6; y++) {
 				float avg= testing.GetAvg(month,z+days[y]);
-				String query = "SELECT * FROM dailyinformation WHERE Date LIKE '"+month + "%' AND DayOfMonth = '" + z+days[y]+"'";
+				String query = "SELECT * FROM "+month+" WHERE DayOfMonth = '" + z+days[y]+"'";
+				//System.out.println(z+days[y]);
+				float high=0;
 				try{
-					ResultSet rs=st.executeQuery(query);
 					avg= testing.GetAvg(month,z+days[y]);
+					ResultSet rs=st.executeQuery(query);
+					//System.out.println("Hello");
 					if (rs.next())
-					checker=rs.getFloat("GrossSales");
+						checker=rs.getFloat("AvgGrossSales");
+					rs.close();
 					if (checker > 0)
 						avg = checker;
 				}catch (SQLException e){
 					System.out.println(e);
+					//continue;
 					return false;
 					
 				}
-				dailyavg temp=hold.get((z*(y+1))-1);
-				System.out.println(temp.grosssales);
-				testing.UpdateOneDay(month,avg,z+days[y],temp.grosssales);
+				query = new String();
+				query="SELECT * FROM dailyinformation WHERE Date LIKE '" + array[0] + "%' AND DayOfMonth = '"+z+days[y]+"'";
+				System.out.println(array[0]);
+				try {
+					ResultSet rs=st.executeQuery(query);
+					if(rs.next()) {
+						high=rs.getFloat("GrossSales");
+						testing.UpdateOneDay(month,high,z+days[y],avg);
+						System.out.println(high);
+					}
+					rs.close();
+				}catch(SQLException e) {
+					System.out.println(e);
+				}
+				
+				
+				//System.out.println(temp.grosssales);
+				testing.UpdateOneDay(month,high,z+days[y],avg);
+				
 	}
 	return true;	
 	}
 	
 	//todo: update every year
-	
+
+
 	
 	public static void main(String[] args) {
 //		System.out.println(frontGetAvg("01/25/2019","fri"));
-		CSVupdate("C:\\Users\\cadew\\OneDrive\\Documents\\GitHub\\Software2project\\documents\\Deliverable_3\\gross_sale_8_21_not_finish.csv");
+//		CSVupdate("C:\\Users\\cadew\\OneDrive\\Documents\\GitHub\\Software2project\\documents\\Deliverable_3\\gross_sale_8_21_not_finish.csv");
 		
-		testing blah=new testing();
-		boolean worked = false;
-		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
-		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
-		hold = blah.filllist();
-		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
-		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
-		Runtime r=Runtime.getRuntime();
-		float total = 0;
-		int count = 0;
-		float checker = 0;
-			for (int x = 0; x < 12; x++) {
-				MonthUpdate(monthname[x]);
+		boolean test= testing.MonthUpdate("06/07/2018");
+		System.out.println(test);
+		
+//		testing blah=new testing();
+//		boolean worked = false;
+//		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
+//		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
+//		hold = blah.filllist();
+//		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
+//		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
+//		Runtime r=Runtime.getRuntime();
+//		float total = 0;
+//		int count = 0;
+//		float checker = 0;
+//			for (int x = 0; x < 12; x++) {
+//				MonthUpdate(monthname[x]);
 //				r.gc();
 //				for (int z = 1; z <= 5; z++)
 //					for (int y = 0; y <= 6; y++) {
@@ -286,6 +320,5 @@ public class testing {
 //					}			}
 	} }
 
-}
 
 
