@@ -17,7 +17,7 @@ public class testing {
 	static private Statement st = connectionmanagment.getst();
 	static private Connection con=connectionmanagment.getcon();
 
-	// updates one day in the months database
+	// updates one day in the months database with name month ex jan
 	// high order is most recent data where as loworder is previous
 	// if the month table is empty then call filllist in order to populate an
 	// average for the scenario, should only need to be used on first run
@@ -61,7 +61,8 @@ public class testing {
 
 	}
 
-	
+	//finds and formats the day properly 
+	//ex returns 1fri
 	public static String getNumDay(String date, String day1){
 		String day = formatday(day1);
 		String[] dayof = date.split("/");
@@ -157,7 +158,6 @@ public class testing {
 
 	// inserts into dailyinformation table
 	//date is formated as MM/DD/YYYY
-	//dayofweek is 
 	private static boolean IntoDaily(String date, String dayofweek, String dayofyear, String dayofmonth, float GrossSales) {
 		if (GrossSales == 0) return true;
 		try {
@@ -216,7 +216,7 @@ public class testing {
 		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
 		hold = testing.filllist();
-		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
+		//String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
 		float total = 0;
 		int count = 0;
 		float checker = 0;
@@ -243,6 +243,9 @@ public class testing {
 	}
 	return true;	
 	}
+	
+	//todo: update every year
+	
 	
 	public static void main(String[] args) {
 //		System.out.println(frontGetAvg("01/25/2019","fri"));
