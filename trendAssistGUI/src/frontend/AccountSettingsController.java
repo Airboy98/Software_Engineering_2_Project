@@ -6,7 +6,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -17,15 +16,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class AccountSettingsController implements Initializable {
+
+public class AccountSettingsController {
 
     PasswordENC Pll = new PasswordENC();
 
@@ -33,25 +30,14 @@ public class AccountSettingsController implements Initializable {
     @FXML private TableColumn<UserDetails, String> columnUser;
     @FXML private TableColumn<UserDetails, String> columnPass;
     @FXML private TableColumn<UserDetails, String> columnPos;
-    @FXML
-    private TextField uname;
-    @FXML
-    private TextField pass;
-    @FXML
-    private TextField pos;
-
+    @FXML private TextField uname;
+    @FXML private TextField pass;
+    @FXML private TextField pos;
     static String tempUsername;
-
     private ObservableList<UserDetails> data;
-
     static private Connection AccCon = DBconnection.getconac();
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
-    public void loadDataFromDatabase() throws IOException {
+    public void loadDataFromDatabase() {
         List<String> passwords = new ArrayList<>();
 
         try {
@@ -67,21 +53,20 @@ public class AccountSettingsController implements Initializable {
                 i++;
             }
 
-        }catch (SQLException ex){
-            System.err.println("Error"+ex);
+        } catch (SQLException ex) {
+            System.err.println("Error" + ex);
         }
 
         columnUser.setCellValueFactory(new PropertyValueFactory<>("user"));
         columnPass.setCellValueFactory(new PropertyValueFactory<>("pass"));
         columnPos.setCellValueFactory(new PropertyValueFactory<>("pos"));
 
-
         table.setItems(null);
         table.setItems(data);
     }
 
-    public void selectRowItems(){
-        if(table.getSelectionModel().getSelectedItem() != null){
+    public void selectRowItems() {
+        if (table.getSelectionModel().getSelectedItem() != null) {
             UserDetails selectedRow = table.getSelectionModel().getSelectedItem();
             tempUsername = selectedRow.getUser();
             uname.setText(selectedRow.getUser());
@@ -90,8 +75,8 @@ public class AccountSettingsController implements Initializable {
         }
     }
 
-    public void deleteAccount() throws IOException {
-        if(table.getSelectionModel().getSelectedItem() != null){
+    public void deleteAccount() {
+        if (table.getSelectionModel().getSelectedItem() != null) {
             UserDetails selectedRow = table.getSelectionModel().getSelectedItem();
             try {
                 PreparedStatement pstmt = AccCon.prepareStatement("DELETE FROM users WHERE Username = ?");
@@ -108,9 +93,7 @@ public class AccountSettingsController implements Initializable {
         }
     }
 
-    public void updateAccount() throws IOException {
-
-
+    public void updateAccount() {
         try {
             PreparedStatement pstmt = AccCon.prepareStatement("UPDATE users SET Username = ?, Passhash = ?, Position = ? WHERE Username = '" + tempUsername + "'");
             String Password = pass.getText();
@@ -120,9 +103,7 @@ public class AccountSettingsController implements Initializable {
             pstmt.setString(1, uname.getText());
             pstmt.setString(2, holder);
             pstmt.setString(3, pos.getText());
-
             pstmt.executeUpdate();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -154,6 +135,5 @@ public class AccountSettingsController implements Initializable {
         createStage.hide();
         createStage.show();
     }
-
 
 }

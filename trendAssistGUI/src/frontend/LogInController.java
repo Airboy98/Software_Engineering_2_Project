@@ -9,25 +9,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-
-
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class LogInController implements Initializable{
+public class LogInController{
 
-
-
-    @FXML
-    private TextField userID;
-    @FXML
-    private PasswordField passID;
+    @FXML private TextField userID;
+    @FXML private PasswordField passID;
+    @FXML private Label label;
 
     //Action method assigned to the sign in button, so when clicked will
     // check username and password with the database using an decryption
@@ -56,7 +49,9 @@ public class LogInController implements Initializable{
             errorMessage.showAndWait();
         }
         else if(checkResult[0].equals("True") && checkResult[1].equals("Manager")){
+
             Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+
                 Scene homePageScene = new Scene(homePageParent);
                 Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 appStage.hide();
@@ -76,9 +71,4 @@ public class LogInController implements Initializable{
             appStage.show();
         }
     }
-
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
 }

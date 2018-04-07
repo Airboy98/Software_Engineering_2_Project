@@ -2,6 +2,7 @@ package frontend;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -15,9 +16,10 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
         primaryStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         primaryStage.setTitle("trendAssist");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root));
         primaryStage.hide();
         primaryStage.show();
+
     }
 
 

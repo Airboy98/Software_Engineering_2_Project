@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.HomePageController">
+<Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="736.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.HomePageController">
    <children>
-      <Button layoutX="26.0" layoutY="105.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
+      <Button layoutX="26.0" layoutY="120.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="122.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
          <font>
-            <Font name="Candara" size="18.0" />
+            <Font name="Candara" size="24.0" />
          </font>
          <effect>
             <DisplacementMap>
@@ -25,33 +25,33 @@
                </input>
             </DisplacementMap>
          </effect></Button>
-      <Button layoutX="26.0" layoutY="226.0" mnemonicParsing="false" onAction="#accountSettingsButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Account Settings" textFill="WHITE">
+      <Button layoutX="26.0" layoutY="264.0" mnemonicParsing="false" onAction="#accountSettingsButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Account Settings" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button layoutX="313.0" layoutY="105.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
+      <Button layoutX="376.0" layoutY="121.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button fx:id="createAccount" layoutX="313.0" layoutY="226.0" mnemonicParsing="false" onAction="#createAccountButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Create New Account" textFill="WHITE">
+      <Button fx:id="createAccount" layoutX="376.0" layoutY="264.0" mnemonicParsing="false" onAction="#createAccountButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Create New Account" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Label alignment="CENTER" layoutX="149.0" layoutY="34.0" text="Hello &lt;USERNAME&gt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+      <Label fx:id="label" alignment="CENTER" layoutX="216.0" layoutY="56.0" text="Hello &lt;USERNAME&gt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="Candara" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="271.0" layoutY="349.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: ff5733;" text="Log Out" textFill="WHITE" />
+      <Button layoutX="287.0" layoutY="408.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: ff5733;" text="Log Out" textFill="WHITE" />
    </children>
    <effect>
       <Blend />

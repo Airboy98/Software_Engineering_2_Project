@@ -1,58 +1,49 @@
 package Encryption;
 
-import Encryption.PasswordENC;
 import frontend.DBconnection;
 
 import java.sql.*;
 
-public class passQL{
+public class passQL {
     private Connection connect;
     private Statement state;
     private DBconnection db = new DBconnection();
 
     PasswordENC Pll = new PasswordENC();
 
-    public passQL(){
-        try{
+    public passQL() {
+        try {
             connect = db.getconac();
             state = connect.createStatement();
-        }catch(Exception exep){
+        } catch (Exception exep) {
             exep.printStackTrace();
             System.out.println("Error: " + exep);
         }
     }
-    //close
-    public void close(){
-        try{
-            connect.close();
-        }catch(Exception E){
 
-        }
-    }
-
-    public boolean AddUser(String Name, String Password, String position){
-        try{
+    public boolean AddUser(String Name, String Password, String position) {
+        try {
             byte[] pass;
             pass = Pll.encryptPass(Password);
             String holder = Pll.byteToString(pass);
             String QQ = "INSERT into users (Username,Passhash,Position) VALUES ('" + Name + "','" + holder + "','" + position + "')";
             state.execute(QQ);
             return true;
-        }catch(Exception exep){//SQLException exep
+        } catch (Exception exep) {//SQLException exep
             return false;
         }
     }
 
-    public String[] CheckPass(String uname, String pass){
+    public String[] CheckPass(String uname, String pass) {
         String[] ret = new String[2];
-        try{
+        try {
             Statement st = connect.createStatement();
             String QQ = ("SELECT * FROM users WHERE Username = '" + uname + "';");
             ResultSet rs = st.executeQuery(QQ);
 
-            if(rs.next()) {
-                int ID = rs.getInt("AccountID");
-                String username = rs.getString("Username");
+            if (rs.next()) {
+                //int ID = rs.getInt("AccountID");
+                //String username = rs.getString("Username");
                 String hash = rs.getString("Passhash");
                 String pos = rs.getString("Position");
 
@@ -60,7 +51,7 @@ public class passQL{
 
                 String dec = Pll.decrypt(almost);
 
-                if(dec.equals(pass)){
+                if (dec.equals(pass)) {
                     ret[0] = "True";
                     ret[1] = pos;
                     return ret;
@@ -69,7 +60,7 @@ public class passQL{
                 ret[1] = null;
                 return ret;
             }
-        }catch(SQLException exep){
+        } catch (SQLException exep) {
             exep.printStackTrace();
         }
         ret[0] = null;

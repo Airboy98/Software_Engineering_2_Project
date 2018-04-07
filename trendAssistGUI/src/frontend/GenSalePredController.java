@@ -1,31 +1,25 @@
 package frontend;
+
 import backend.DbManager;
-import backend.DbManager.*;
 
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+
 import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ResourceBundle;
 
-public class GenSalePredController implements Initializable {
+
+public class GenSalePredController {
 
     @FXML private BarChart<String, Float> barChart;
     @FXML private DatePicker datePicker;
@@ -36,18 +30,8 @@ public class GenSalePredController implements Initializable {
     @FXML private TableColumn<SalesDetails, Float> columnAvgSales;
 
 
-    static private Connection SalesCon = DBconnection.getconsa();
-    private ObservableList<SalesDetails> data;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
-
     //Method that will populate a bar graph based on user selection of dates he/she
     // wants to check
-
     public void populateBarGraph(ActionEvent event) throws IOException {
 
         //Retrieve values from datepickers field in the GUI, and from the date
@@ -87,32 +71,23 @@ public class GenSalePredController implements Initializable {
                 w[i] = DbManager.frontGetAvg(x[i], dow[i]);
             }
 
-
             XYChart.Series<String, Float> series = new XYChart.Series<>();
             float sum = 0;
-//            try {
-                data = FXCollections.observableArrayList();
-                Integer p = 0;
-                barChart.getData().clear();
-                while (p <= (d2 - d1)) {
-                    //PreparedStatement pstmt = SalesCon.prepareStatement("SELECT * FROM " + y[p] + " WHERE DayOfMonth = '" + z[p] + "'");
 
-                    //pstmt.executeQuery();
-                    //Populate graph using database values
+            ObservableList<SalesDetails> data = FXCollections.observableArrayList();
+            Integer p = 0;
+            barChart.getData().clear();
+            while (p <= (d2 - d1)) {
+                series.getData().add(new XYChart.Data<>(x[p], w[p]));
+                data.add(new SalesDetails(x[p], w[p]));
+                sum += w[p];
+                p++;
+            }
 
-                    series.getData().add(new XYChart.Data<>(x[p], w[p]));
-                    data.add(new SalesDetails(x[p], w[p]));
-                    sum += w[p];
-                    p++;
-                }
+            String value = String.valueOf(sum / p);
+            Average.setText(value);
+            barChart.getData().add(series);
 
-                String value = String.valueOf(sum / p);
-                Average.setText(value);
-                barChart.getData().add(series);
-
-//            } catch (SQLException ex) {
-//                System.err.println("Error" + ex);
-//            }
             columnDate.setCellValueFactory(new PropertyValueFactory<SalesDetails, String>("Date"));
             columnAvgSales.setCellValueFactory(c ->
                     new ReadOnlyObjectWrapper<Float>(c.getValue().getAvgSales()));
