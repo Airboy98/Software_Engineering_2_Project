@@ -58,5 +58,16 @@ public class HomePageController {
         logoutStage.show();
     }
 
+    public void uploadSalesDataButtonAction(ActionEvent event) throws IOException {
+        Parent upParent = FXMLLoader.load(getClass().getResource("UploadSalesData.fxml"));
+        Scene upScene = new Scene(upParent);
+        Stage upStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        upStage.hide();
+        upStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+        upStage.setScene(upScene);
+        upStage.setTitle("Upload Sales Data");
+        upStage.show();
+    }
+
 
 }

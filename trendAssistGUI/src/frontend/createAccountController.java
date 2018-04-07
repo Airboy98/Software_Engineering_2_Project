@@ -21,9 +21,10 @@ import java.net.URL;
 import java.sql.Connection;
 import java.util.ResourceBundle;
 
+import static frontend.DBconnection.getconac;
+
 public class createAccountController implements Initializable {
 
-    private DBconnection dc;
     ObservableList list = FXCollections.observableArrayList();
 
     //Declaration of variables in the GUI, in order to be able to access them
@@ -36,9 +37,11 @@ public class createAccountController implements Initializable {
     @FXML
     private ChoiceBox<String> Role;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        dc = new DBconnection();
+
         loadData();
     }
 
@@ -101,8 +104,7 @@ public class createAccountController implements Initializable {
         } else {
             //Check if both password are the same
             if (pass1.equals(pass2)) {
-                //Create connection to database
-                Connection con = dc.makeconnection();
+
                 //Encryption method call
                 create.AddUser(user, pass1, pos);
             }

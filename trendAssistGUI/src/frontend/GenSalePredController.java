@@ -1,6 +1,6 @@
 package frontend;
-import backend.testing;
-import backend.testing.*;
+import backend.DbManager;
+import backend.DbManager.*;
 
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
@@ -36,12 +36,12 @@ public class GenSalePredController implements Initializable {
     @FXML private TableColumn<SalesDetails, Float> columnAvgSales;
 
 
-    private DBconnection dc;
+    static private Connection SalesCon = DBconnection.getconsa();
     private ObservableList<SalesDetails> data;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dc = new DBconnection();
+
     }
 
 
@@ -82,23 +82,22 @@ public class GenSalePredController implements Initializable {
                 temp[i] = ld.plusDays(i);
                 dow[i] = temp[i].getDayOfWeek().toString();
                 x[i] = temp[i].format(formatter);
-                y[i] = testing.WhatMonth(x[i]);
-                z[i] = testing.getNumDay(x[i], dow[i]);
-                w[i] = testing.frontGetAvg(x[i], dow[i]);
+                y[i] = DbManager.WhatMonth(x[i]);
+                z[i] = DbManager.getNumDay(x[i], dow[i]);
+                w[i] = DbManager.frontGetAvg(x[i], dow[i]);
             }
 
 
             XYChart.Series<String, Float> series = new XYChart.Series<>();
             float sum = 0;
-            try {
-                Connection con = dc.makeconnection1();
+//            try {
                 data = FXCollections.observableArrayList();
                 Integer p = 0;
                 barChart.getData().clear();
                 while (p <= (d2 - d1)) {
-                    PreparedStatement pstmt = con.prepareStatement("SELECT * FROM " + y[p] + " WHERE DayOfMonth = '" + z[p] + "'");
+                    //PreparedStatement pstmt = SalesCon.prepareStatement("SELECT * FROM " + y[p] + " WHERE DayOfMonth = '" + z[p] + "'");
 
-                    pstmt.executeQuery();
+                    //pstmt.executeQuery();
                     //Populate graph using database values
 
                     series.getData().add(new XYChart.Data<>(x[p], w[p]));
@@ -111,9 +110,9 @@ public class GenSalePredController implements Initializable {
                 Average.setText(value);
                 barChart.getData().add(series);
 
-            } catch (SQLException ex) {
-                System.err.println("Error" + ex);
-            }
+//            } catch (SQLException ex) {
+//                System.err.println("Error" + ex);
+//            }
             columnDate.setCellValueFactory(new PropertyValueFactory<SalesDetails, String>("Date"));
             columnAvgSales.setCellValueFactory(c ->
                     new ReadOnlyObjectWrapper<Float>(c.getValue().getAvgSales()));

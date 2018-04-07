@@ -1,3 +1,8 @@
+package Encryption;
+
+import Encryption.PasswordENC;
+import frontend.DBconnection;
+
 import java.sql.*;
 
 public class passQL{
@@ -9,7 +14,7 @@ public class passQL{
 
     public passQL(){
         try{
-            connect = db.makeconnection();
+            connect = db.getconac();
             state = connect.createStatement();
         }catch(Exception exep){
             exep.printStackTrace();
@@ -30,7 +35,7 @@ public class passQL{
             byte[] pass;
             pass = Pll.encryptPass(Password);
             String holder = Pll.byteToString(pass);
-            String QQ = "INSERT into users (username,passhash,position) VALUES ('" + Name + "','" + holder + "','" + position + "')";
+            String QQ = "INSERT into users (Username,Passhash,Position) VALUES ('" + Name + "','" + holder + "','" + position + "')";
             state.execute(QQ);
             return true;
         }catch(Exception exep){//SQLException exep
@@ -42,14 +47,14 @@ public class passQL{
         String[] ret = new String[2];
         try{
             Statement st = connect.createStatement();
-            String QQ = ("SELECT * FROM users WHERE username = '" + uname + "';");
+            String QQ = ("SELECT * FROM users WHERE Username = '" + uname + "';");
             ResultSet rs = st.executeQuery(QQ);
 
             if(rs.next()) {
-                int ID = rs.getInt("CustomerID");
-                String username = rs.getString("username");
-                String hash = rs.getString("passhash");
-                String pos = rs.getString("position");
+                int ID = rs.getInt("AccountID");
+                String username = rs.getString("Username");
+                String hash = rs.getString("Passhash");
+                String pos = rs.getString("Position");
 
                 byte[] almost = Pll.stringToByte(hash);
 

@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 
 public class LogInController implements Initializable{
 
-    private DBconnection dc;
+
 
     @FXML
     private TextField userID;
@@ -78,7 +78,7 @@ public class LogInController implements Initializable{
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dc = new DBconnection();
+
     }
 
 }

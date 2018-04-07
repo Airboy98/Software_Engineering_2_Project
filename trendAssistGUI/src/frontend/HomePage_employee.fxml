@@ -25,7 +25,7 @@
                </input>
             </DisplacementMap>
          </effect></Button>
-      <Button layoutX="160.0" layoutY="237.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Update Sales Data" textFill="WHITE">
+      <Button layoutX="160.0" layoutY="237.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
