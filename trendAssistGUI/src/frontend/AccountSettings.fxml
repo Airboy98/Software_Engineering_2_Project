@@ -22,13 +22,13 @@
                 <Font name="Candara Bold" size="37.0" />
             </font>
         </Label>
-        <TextField fx:id="uname" layoutX="95.0" layoutY="457.0" promptText="Username" />
-        <TextField fx:id="pass" layoutX="258.0" layoutY="457.0" promptText="Password" />
-        <TextField fx:id="pos" layoutX="420.0" layoutY="457.0" promptText="Position" />
-        <Button fx:id="update" layoutX="579.0" layoutY="457.0" mnemonicParsing="false" onAction="#updateAccount" style="-fx-background-color: ff5733;" text="Update" textFill="WHITE" />
-        <Button fx:id="delete" layoutX="652.0" layoutY="457.0" mnemonicParsing="false" onAction="#deleteAccount" style="-fx-background-color: ff5733;" text="Delete" textFill="WHITE" />
-        <Button fx:id="back" layoutX="14.0" layoutY="505.0" mnemonicParsing="false" onAction="#goHomePageAction" style="-fx-background-color: ff5733;" text="Back" textFill="WHITE" />
-        <Button fx:id="logout" layoutX="732.0" layoutY="14.0" mnemonicParsing="false" onAction="#goLoginAction" style="-fx-background-color: ff5733;" text="LogOut" textFill="WHITE" />
-        <Button layoutX="657.0" layoutY="419.0" mnemonicParsing="false" onAction="#loadDataFromDatabase" style="-fx-background-color: ff5733;" text="Load" textFill="WHITE" />
+        <TextField fx:id="uname" layoutX="95.0" layoutY="457.0" prefHeight="25.0" prefWidth="149.0" promptText="Username" />
+        <TextField fx:id="pass" layoutX="258.0" layoutY="457.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" />
+        <TextField fx:id="pos" layoutX="420.0" layoutY="457.0" prefHeight="25.0" prefWidth="149.0" promptText="Position" />
+        <Button fx:id="update" layoutX="588.0" layoutY="457.0" mnemonicParsing="false" onAction="#updateAccount" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: ff5733;" text="Update" textFill="WHITE" />
+        <Button fx:id="delete" layoutX="652.0" layoutY="457.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: ff5733;" text="Delete" textFill="WHITE" />
+        <Button fx:id="back" layoutX="14.0" layoutY="505.0" mnemonicParsing="false" onAction="#goHomePageAction" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: ff5733;" text="Back" textFill="WHITE" />
+        <Button fx:id="logout" layoutX="732.0" layoutY="14.0" mnemonicParsing="false" onAction="#goLoginAction" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: ff5733;" text="LogOut" textFill="WHITE" />
+        <Button layoutX="657.0" layoutY="419.0" mnemonicParsing="false" onAction="#loadDataFromDatabase" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: ff5733;" text="Load" textFill="WHITE" />
     </children>
 </AnchorPane>

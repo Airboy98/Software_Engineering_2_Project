@@ -19,8 +19,8 @@
       <AnchorPane layoutX="547.0" layoutY="37.0" prefHeight="395.0" prefWidth="263.0" style="-fx-background-color: #FF5733;">
          <children>
             <Button layoutX="37.0" layoutY="315.0" mnemonicParsing="false" onAction="#logInButtonAction" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #f44242;" text="Sign In" textFill="WHITE" />
-            <TextField fx:id="userID" alignment="CENTER" layoutX="39.0" layoutY="112.0" promptText="Username" />
-            <PasswordField fx:id="passID" alignment="CENTER" layoutX="39.0" layoutY="161.0" promptText="Password" />
+            <TextField fx:id="userID" alignment="CENTER" layoutX="39.0" layoutY="112.0" prefHeight="31.0" prefWidth="187.0" promptText="Username" />
+            <PasswordField fx:id="passID" alignment="CENTER" layoutX="39.0" layoutY="161.0" prefHeight="31.0" prefWidth="187.0" promptText="Password" />
             <Label layoutX="97.0" layoutY="53.0" text="Sign In" textFill="WHITE">
                <font>
                   <Font name="Candara" size="24.0" />
