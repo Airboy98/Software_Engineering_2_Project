@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.HomePageController">
+<Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="660.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.HomePageController">
    <children>
-      <Button layoutX="160.0" layoutY="110.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
+      <Button layoutX="160.0" layoutY="95.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="122.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
          <font>
-            <Font name="Candara" size="18.0" />
+            <Font name="Candara" size="24.0" />
          </font>
          <effect>
             <DisplacementMap>
@@ -25,19 +25,22 @@
                </input>
             </DisplacementMap>
          </effect></Button>
-      <Button layoutX="160.0" layoutY="237.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="100.0" prefWidth="262.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
+      <Button layoutX="160.0" layoutY="237.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="122.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font name="Candara" size="24.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Label alignment="CENTER" layoutX="43.0" layoutY="29.0" text="Hello &lt;USERNAME&gt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+      <Label alignment="CENTER" layoutX="238.0" layoutY="32.0" prefHeight="43.0" prefWidth="175.0" text="trendAssist" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
          <font>
-            <Font name="Candara" size="36.0" />
+            <Font name="Candara Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="495.0" layoutY="337.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: ff5733;" text="Log Out" textFill="WHITE" />
+      <Button layoutX="572.0" layoutY="355.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: ff5733;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font></Button>
    </children>
    <effect>
       <Blend />

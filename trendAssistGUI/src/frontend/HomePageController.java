@@ -26,6 +26,7 @@ public class HomePageController {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Create New Account");
+        createStage.setResizable(false);
         createStage.show();
     }
 
@@ -37,6 +38,7 @@ public class HomePageController {
         predStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         predStage.setScene(predScene);
         predStage.setTitle("Sale Prediction");
+        predStage.setResizable(false);
         predStage.show();
     }
 
@@ -48,6 +50,7 @@ public class HomePageController {
         accStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         accStage.setScene(accScene);
         accStage.setTitle("Account Settings");
+        accStage.setResizable(false);
         accStage.show();
     }
 
@@ -59,6 +62,7 @@ public class HomePageController {
         logoutStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         logoutStage.setScene(logoutScene);
         logoutStage.setTitle("trendAssist");
+        logoutStage.setResizable(false);
         logoutStage.show();
     }
 
@@ -70,6 +74,7 @@ public class HomePageController {
         upStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         upStage.setScene(upScene);
         upStage.setTitle("Upload Sales Data");
+        upStage.setResizable(false);
         upStage.show();
     }
 }

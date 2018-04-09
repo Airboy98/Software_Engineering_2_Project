@@ -9,14 +9,23 @@
 
 <AnchorPane prefHeight="158.0" prefWidth="477.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.UploadSalesDataController">
     <children>
-        <DatePicker fx:id="datePick" layoutX="23.0" layoutY="60.0" />
-        <Button fx:id="back" layoutX="342.0" layoutY="113.0" mnemonicParsing="false" onAction="#goHomePageAction" style="-fx-background-color: ff5733;" text="Back" textFill="WHITE" />
-        <Button fx:id="logout" layoutX="393.0" layoutY="14.0" mnemonicParsing="false" onAction="#goLoginAction" style="-fx-background-color: ff5733;" text="LogOut" textFill="WHITE" />
-        <Button fx:id="upload" layoutX="407.0" layoutY="113.0" mnemonicParsing="false" onAction="#uploadData" style="-fx-background-color: ff5733;" text="Done" textFill="WHITE" />
-        <TextField fx:id="sales" layoutX="257.0" layoutY="60.0" promptText="Sales Amount" />
-        <Label layoutX="142.0" layoutY="14.0" text="Modify Daily Sales" textFill="WHITE">
+        <DatePicker fx:id="datePick" layoutX="23.0" layoutY="60.0" prefHeight="31.0" prefWidth="218.0" />
+        <Button fx:id="back" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" onAction="#goHomePageAction" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: ff5733;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font></Button>
+        <Button fx:id="logout" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" onAction="#goLoginAction" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: ff5733;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font></Button>
+        <Button fx:id="upload" layoutX="345.0" layoutY="113.0" mnemonicParsing="false" onAction="#uploadData" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: ff5733;" text="Done" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font></Button>
+        <TextField fx:id="sales" layoutX="257.0" layoutY="60.0" prefHeight="31.0" prefWidth="187.0" promptText="Sales Amount" />
+        <Label layoutX="142.0" layoutY="14.0" prefHeight="30.0" prefWidth="189.0" text="Modify Daily Sales" textFill="WHITE">
             <font>
-                <Font name="Candara" size="24.0" />
+                <Font name="Candara Bold" size="24.0" />
             </font>
         </Label>
     </children>

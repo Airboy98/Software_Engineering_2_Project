@@ -46,6 +46,7 @@ public class createAccountController implements Initializable {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Back");
+        createStage.setResizable(false);
         createStage.hide();
         createStage.show();
     }
@@ -59,6 +60,7 @@ public class createAccountController implements Initializable {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Log Out");
+        createStage.setResizable(false);
         createStage.hide();
         createStage.show();
     }

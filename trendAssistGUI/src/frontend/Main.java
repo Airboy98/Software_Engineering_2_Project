@@ -18,6 +18,7 @@ public class Main extends Application {
         primaryStage.setTitle("trendAssist");
         primaryStage.setScene(new Scene(root));
         primaryStage.hide();
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }

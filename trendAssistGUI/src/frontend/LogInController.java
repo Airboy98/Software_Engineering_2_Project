@@ -58,6 +58,7 @@ public class LogInController{
                 appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
                 appStage.setScene(homePageScene);
                 appStage.setTitle("Home Page");
+                appStage.setResizable(false);
                 appStage.show();
         }
         else if(checkResult[0].equals("True") && checkResult[1].equals("Employee") ){
@@ -68,6 +69,7 @@ public class LogInController{
             appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
             appStage.setScene(homePageScene);
             appStage.setTitle("Home Page");
+            appStage.setResizable(false);
             appStage.show();
         }
     }

@@ -53,6 +53,7 @@ public class UploadSalesDataController {
         hpStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         hpStage.setScene(hpScene);
         hpStage.setTitle("Back");
+        hpStage.setResizable(false);
         hpStage.hide();
         hpStage.show();
     }
@@ -66,6 +67,7 @@ public class UploadSalesDataController {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Log Out");
+        createStage.setResizable(false);
         createStage.hide();
         createStage.show();
     }

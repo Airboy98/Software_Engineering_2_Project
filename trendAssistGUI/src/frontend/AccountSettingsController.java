@@ -119,6 +119,7 @@ public class AccountSettingsController {
         hpStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         hpStage.setScene(hpScene);
         hpStage.setTitle("Back");
+        hpStage.setResizable(false);
         hpStage.hide();
         hpStage.show();
     }
@@ -132,6 +133,7 @@ public class AccountSettingsController {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Log Out");
+        createStage.setResizable(false);
         createStage.hide();
         createStage.show();
     }
