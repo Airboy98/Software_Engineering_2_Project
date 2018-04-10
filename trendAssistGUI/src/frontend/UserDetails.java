@@ -8,7 +8,7 @@ public class UserDetails {
     private final StringProperty pass;
     private final StringProperty pos;
 
-    public UserDetails(String user, String pass, String pos){
+    public UserDetails(String user, String pass, String pos) {
         this.user = new SimpleStringProperty(user);
         this.pass = new SimpleStringProperty(pass);
         this.pos = new SimpleStringProperty(pos);
@@ -26,14 +26,15 @@ public class UserDetails {
         return pos.get();
     }
 
-    public void setUser(String value){
+    public void setUser(String value) {
         user.set(value);
     }
 
-    public void setPass(String value){
+    public void setPass(String value) {
         pass.set(value);
     }
-    public void setPos(String value){
+
+    public void setPos(String value) {
         pos.set(value);
     }
 

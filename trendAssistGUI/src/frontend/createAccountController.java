@@ -18,27 +18,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
 import java.util.ResourceBundle;
+
+import static frontend.DBconnection.getconac;
 
 public class createAccountController implements Initializable {
 
-    private DBconnection dc;
     ObservableList list = FXCollections.observableArrayList();
 
     //Declaration of variables in the GUI, in order to be able to access them
-    @FXML
-    private TextField userID;
-    @FXML
-    private PasswordField password1;
-    @FXML
-    private PasswordField password2;
-    @FXML
-    private ChoiceBox<String> Role;
+    @FXML private TextField userID;
+    @FXML private PasswordField password1;
+    @FXML private PasswordField password2;
+    @FXML private ChoiceBox<String> Role;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        dc = new DBconnection();
         loadData();
     }
 
@@ -51,6 +46,7 @@ public class createAccountController implements Initializable {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Back");
+        createStage.setResizable(false);
         createStage.hide();
         createStage.show();
     }
@@ -64,6 +60,7 @@ public class createAccountController implements Initializable {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Log Out");
+        createStage.setResizable(false);
         createStage.hide();
         createStage.show();
     }
@@ -101,13 +98,10 @@ public class createAccountController implements Initializable {
         } else {
             //Check if both password are the same
             if (pass1.equals(pass2)) {
-                //Create connection to database
-                Connection con = dc.makeconnection();
+
                 //Encryption method call
                 create.AddUser(user, pass1, pos);
             }
         }
-
     }
-
 }

@@ -1,17 +1,21 @@
 package frontend;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
+
 public class HomePageController {
+
 
     //Button actions so when an specific button is clicked then switch to correct screen
     public void createAccountButtonAction(ActionEvent event) throws IOException {
@@ -22,6 +26,7 @@ public class HomePageController {
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Create New Account");
+        createStage.setResizable(false);
         createStage.show();
     }
 
@@ -33,6 +38,7 @@ public class HomePageController {
         predStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         predStage.setScene(predScene);
         predStage.setTitle("Sale Prediction");
+        predStage.setResizable(false);
         predStage.show();
     }
 
@@ -44,6 +50,7 @@ public class HomePageController {
         accStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         accStage.setScene(accScene);
         accStage.setTitle("Account Settings");
+        accStage.setResizable(false);
         accStage.show();
     }
 
@@ -55,8 +62,19 @@ public class HomePageController {
         logoutStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         logoutStage.setScene(logoutScene);
         logoutStage.setTitle("trendAssist");
+        logoutStage.setResizable(false);
         logoutStage.show();
     }
 
-
+    public void uploadSalesDataButtonAction(ActionEvent event) throws IOException {
+        Parent upParent = FXMLLoader.load(getClass().getResource("UploadSalesData.fxml"));
+        Scene upScene = new Scene(upParent);
+        Stage upStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        upStage.hide();
+        upStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+        upStage.setScene(upScene);
+        upStage.setTitle("Upload Sales Data");
+        upStage.setResizable(false);
+        upStage.show();
+    }
 }

@@ -1,3 +1,7 @@
+package backend;
+
+import frontend.DBconnection;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -10,10 +14,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class testing {
+public class DbManager {
 
 	static private Statement st = DBconnection.getstsa();
-	static private Connection con=DBconnection.getconsa();
+	static private Connection con = DBconnection.getconsa();
 
 	// updates one day in the months database with name month ex jan
 	// high order is most recent data where as loworder is previous
@@ -57,15 +61,14 @@ public class testing {
 			return 0;
 		//System.out.println(total/count);
 		return total / count;
-
 	}
 
 	//finds and formats the day properly 
 	//ex returns 1fri
-	public static String getNumDay(String date, String day1){
+	public static String getNumDay(String date, String day1) {
 		String day = formatday(day1);
 		String[] dayof = date.split("/");
-		day = dayofmonth(Integer.parseInt(dayof[1]))+ day;
+		day = dayofmonth(Integer.parseInt(dayof[1])) + day;
 		return day;
 	}
 
@@ -73,26 +76,26 @@ public class testing {
 	//date is the date in format MM/DD/YYYY
 	//day1 is the name of the day being requested.This is not case sensitive the day does need to be spelled correctly though
 	public static float frontGetAvg(String date, String day1) {
-		String month= WhatMonth(date);
+		String month = WhatMonth(date);
 		String day = getNumDay(date, day1);
 		//System.out.println(day + " " + month);
 		//System.out.println(GetAvg(month,day));
-		return GetAvg(month,day);
+		return GetAvg(month, day);
 	}
 
 	//finds the month in which the date is in
 	//pass date in format MM/DD/YYYY
 	public static String WhatMonth(String date) {
-		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
+		String monthname[] = {"jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "decm"};
 		String[] day = date.split("/");
-		return monthname[Integer.parseInt(day[0])-1];
+		return monthname[Integer.parseInt(day[0]) - 1];
 	}
 
 	//formats day properly
 	//pass the name of the day being requested properly
 	private static String formatday(String day) {
-		String correct=day.toLowerCase();
-		return correct.substring(0,3);
+		String correct = day.toLowerCase();
+		return correct.substring(0, 3);
 	}
 
 	// fills arraylist for local use
@@ -101,9 +104,9 @@ public class testing {
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
 		for (int x = 1; x <= 5; x++)
 			for (int y = 1; y <= 7; y++) {
-				String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
+				String days[] = {"mon", "tue", "wed", "thu", "fri", "sat", "sun"};
 				float total = 0;
-				float fst=0;
+				float fst = 0;
 				int count = 0;
 				int first = 0;
 				String query = "SELECT * FROM dailyinformation WHERE DayOfMonth = '" + x + days[y - 1] + "'";
@@ -121,7 +124,7 @@ public class testing {
 						//System.out.println(total);
 						count++;
 					}
-					
+
 					dailyavg temp = new dailyavg();
 					if (count != 0) {
 						temp.day = x + days[y - 1];
@@ -131,7 +134,7 @@ public class testing {
 						temp.day = x + days[y - 1];
 						temp.grosssales = 0;
 					}
-					
+
 					//System.out.println(temp.grosssales);
 					hold.add(temp);
 					//System.out.println(temp.grosssales);
@@ -140,7 +143,7 @@ public class testing {
 					System.out.println(e);
 				}
 			}
-		
+
 		return hold;
 	}
 
@@ -160,12 +163,12 @@ public class testing {
 
 	// inserts into dailyinformation table
 	//date is formated as MM/DD/YYYY
-	private static boolean IntoDaily(String date, String dayofweek, float GrossSales) {
-		String dayofmonth= getNumDay(date,dayofweek) + formatday(dayofweek);
-		String array[]=date.split("/");
+	public static boolean IntoDaily(String date, String dayofweek, float GrossSales) {
+		String dayofmonth = getNumDay(date, dayofweek) + formatday(dayofweek);
+		String array[] = date.split("/");
 		int temp = Integer.parseInt(array[0]) * dayofmonth(Integer.parseInt(array[1]));
-		String dayofyear= Integer.toString(temp);
-		
+		String dayofyear = Integer.toString(temp);
+
 		if (GrossSales == 0) return true;
 		try {
 			String query = "INSERT INTO dailyinformation SET Date=?,DayOfWeek=?,DayOfYearByWeek=?,DayOfMonth=?,GrossSales=? ON DUPLICATE KEY UPDATE DayOfWeek=VALUES(DayOfWeek),DayOfYearByWeek=VALUES(DayOfYearByWeek),DayOfMonth=VALUES(DayOfMonth),GrossSales=VALUES(GrossSales)";
@@ -191,7 +194,7 @@ public class testing {
 		try {
 			String current = null;
 			int DayOfYearByWeek;
-			int count=1;
+			int count = 1;
 			String DayOfMonth;
 			scanner = new Scanner(new File(path));
 			// scanner.useDelimiter(",");
@@ -220,105 +223,59 @@ public class testing {
 	//updates an entire month for the new data input
 	public static boolean MonthUpdate(String date) {
 		String month = WhatMonth(date);
-		String array[]=date.split("/");
+		String array[] = date.split("/");
 		System.out.println(month);
-		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
+		String days[] = {"mon", "tue", "wed", "thu", "fri", "sat", "sun"};
 		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
-		hold = testing.filllist();
+		hold = DbManager.filllist();
 		//String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
 		float total = 0;
 		int count = 0;
 		float checker = 0;
-		
+
 		for (int z = 1; z <= 5; z++)
 			for (int y = 0; y <= 6; y++) {
-				float avg= testing.GetAvg(month,z+days[y]);
-				String query = "SELECT * FROM "+month+" WHERE DayOfMonth = '" + z+days[y]+"'";
+				float avg = DbManager.GetAvg(month, z + days[y]);
+				String query = "SELECT * FROM " + month + " WHERE DayOfMonth = '" + z + days[y] + "'";
 				//System.out.println(z+days[y]);
-				float high=0;
-				try{
-					avg= testing.GetAvg(month,z+days[y]);
-					ResultSet rs=st.executeQuery(query);
+				float high = 0;
+				try {
+					avg = DbManager.GetAvg(month, z + days[y]);
+					ResultSet rs = st.executeQuery(query);
 					//System.out.println("Hello");
 					if (rs.next())
-						checker=rs.getFloat("AvgGrossSales");
+						checker = rs.getFloat("AvgGrossSales");
 					rs.close();
 					if (checker > 0)
 						avg = checker;
-				}catch (SQLException e){
+				} catch (SQLException e) {
 					System.out.println(e);
 					//continue;
 					return false;
-					
+
 				}
 				query = new String();
-				query="SELECT * FROM dailyinformation WHERE Date LIKE '" + array[0] + "%' AND DayOfMonth = '"+z+days[y]+"'";
+				query = "SELECT * FROM dailyinformation WHERE Date LIKE '" + array[0] + "%' AND DayOfMonth = '" + z + days[y] + "'";
 				System.out.println(array[0]);
 				try {
-					ResultSet rs=st.executeQuery(query);
-					if(rs.next()) {
-						high=rs.getFloat("GrossSales");
-						testing.UpdateOneDay(month,high,z+days[y],avg);
+					ResultSet rs = st.executeQuery(query);
+					if (rs.next()) {
+						high = rs.getFloat("GrossSales");
+						DbManager.UpdateOneDay(month, high, z + days[y], avg);
 						System.out.println(high);
 					}
 					rs.close();
-				}catch(SQLException e) {
+				} catch (SQLException e) {
 					System.out.println(e);
 				}
-				
-				
+
+
 				//System.out.println(temp.grosssales);
-				testing.UpdateOneDay(month,high,z+days[y],avg);
-				
+				DbManager.UpdateOneDay(month, high, z + days[y], avg);
+
+			}
+		return true;
 	}
-	return true;	
-	}
-	
 	//todo: update every year
-
-
-	
-	public static void main(String[] args) {
-//		System.out.println(frontGetAvg("01/25/2019","fri"));
-//		CSVupdate("C:\\Users\\cadew\\OneDrive\\Documents\\GitHub\\Software2project\\documents\\Deliverable_3\\gross_sale_8_21_not_finish.csv");
-		
-		boolean test= testing.MonthUpdate("06/07/2018");
-		System.out.println(test);
-		
-//		testing blah=new testing();
-//		boolean worked = false;
-//		String days[] = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
-//		ArrayList<dailyavg> hold = new ArrayList<dailyavg>();
-//		hold = blah.filllist();
-//		String months[] = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
-//		String monthname[]= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","decm"};
-//		Runtime r=Runtime.getRuntime();
-//		float total = 0;
-//		int count = 0;
-//		float checker = 0;
-//			for (int x = 0; x < 12; x++) {
-//				MonthUpdate(monthname[x]);
-//				r.gc();
-//				for (int z = 1; z <= 5; z++)
-//					for (int y = 0; y <= 6; y++) {
-//						float avg= blah.GetAvg(monthname[x],z+days[y]);
-//						String query = "SELECT * FROM dailyinformation WHERE Date LIKE '"+months[x] + "%' AND DayOfMonth = '" + z+days[y]+"'";
-//						try{
-//							ResultSet rs=st.executeQuery(query);
-//							if (rs.next())
-//							checker=rs.getFloat("GrossSales");
-//							if (checker > 0)
-//								avg = checker;
-//						}catch (SQLException e){
-//							System.out.println(e);
-//							
-//						}
-//						
-//						dailyavg temp=hold.get((z*(y+1))-1);
-//						System.out.println(temp.grosssales);
-//						worked=blah.UpdateOneDay(monthname[x],avg,z+days[y],temp.grosssales);
-//					}			}
-	} }
-
-
+}
 

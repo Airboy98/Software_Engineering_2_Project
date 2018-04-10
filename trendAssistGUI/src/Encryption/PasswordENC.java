@@ -7,46 +7,41 @@ import java.nio.charset.StandardCharsets;
 public class PasswordENC {
     private String key = "1qazxsw23edcvfr45tgbnhy67ujm,ki8";
     private byte[] raw = key.getBytes();
-    private SecretKeySpec skey= new SecretKeySpec(raw, "AES");
+    private SecretKeySpec skey = new SecretKeySpec(raw, "AES");
     private Cipher c;
 
-    public PasswordENC(){
-        try{
+    public PasswordENC() {
+        try {
             c = Cipher.getInstance("AES");
-        }catch (Exception e){
-            System.out.println("Error while decrypting: "+e.toString());
+        } catch (Exception e) {
+            System.out.println("Error while decrypting: " + e.toString());
         }
-
     }
-    public byte[] encryptPass(String password){
-        try{
+
+    public byte[] encryptPass(String password) {
+        try {
             c.init(Cipher.ENCRYPT_MODE, skey);
             byte[] encrypted = c.doFinal(password.getBytes());
             return encrypted;
-        }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Error while decrypting: " + e.toString());
         }
         return null;
     }
 
-    public String decrypt(byte[] strToDecrypt)
-    {
-        try
-        {
+    public String decrypt(byte[] strToDecrypt) {
+        try {
             c.init(Cipher.DECRYPT_MODE, skey);
             byte[] decrypted = c.doFinal(strToDecrypt);
             String stm = new String(decrypted, StandardCharsets.UTF_8);
             return stm;
-        }
-        catch (Exception e)
-        {
-            System.out.println("Error while decrypting: "+e.toString());
+        } catch (Exception e) {
+            System.out.println("Error while decrypting: " + e.toString());
         }
         return null;
     }
 
-    public String byteToString(byte[] input)
-    {
+    public String byteToString(byte[] input) {
         String holder = "";
         for (int i = 0; i < input.length; i++) //to int array in string form
         {
@@ -55,8 +50,7 @@ public class PasswordENC {
         return holder;
     }
 
-    public byte[] stringToByte(String input)
-    {
+    public byte[] stringToByte(String input) {
         String[] data = input.split(" ");
 
         int[] comp = new int[data.length];
@@ -68,7 +62,6 @@ public class PasswordENC {
         for (int i = 0; i < comp.length; i++) {
             almost[i] = (byte) comp[i];
         }
-
         return almost;
     }
 

@@ -11,7 +11,7 @@ public class SalesDetails {
     private final FloatProperty avgSales;
 
 
-    public SalesDetails(String date, Float avgSales){
+    public SalesDetails(String date, Float avgSales) {
         this.date = new SimpleStringProperty(date);
         this.avgSales = new SimpleFloatProperty(avgSales);
     }
@@ -25,12 +25,11 @@ public class SalesDetails {
     }
 
 
-
-    public void setDate(String value){
+    public void setDate(String value) {
         date.set(value);
     }
 
-    public void setAvgSales(String value){
+    public void setAvgSales(String value) {
         avgSales.set(Float.parseFloat(value));
     }
 

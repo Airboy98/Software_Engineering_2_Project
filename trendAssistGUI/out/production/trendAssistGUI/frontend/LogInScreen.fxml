@@ -4,51 +4,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LogInController">
+<AnchorPane prefHeight="468.0" prefWidth="846.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LogInController">
    <children>
-      <AnchorPane prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="468.0" fitWidth="886.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/icons/fallingNumbers.JPG" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="547.0" layoutY="37.0" prefHeight="395.0" prefWidth="263.0" style="-fx-background-color: #FF5733;">
          <children>
-            <AnchorPane>
-               <children>
-                  <Pane layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;">
-                      <children>
-                        <AnchorPane layoutX="334.0" layoutY="26.0" prefHeight="341.0" prefWidth="230.0" style="-fx-background-color: #FF5733;">
-                           <children>
-                              <TextField id="userID" fx:id="userID" alignment="TOP_CENTER" layoutX="22.0" layoutY="87.0" promptText="Username" />
-                                <PasswordField id="pass" fx:id="passID" alignment="CENTER" layoutX="22.0" layoutY="132.0" promptText="Password" />
-                                <Button contentDisplay="TOP" layoutX="82.0" layoutY="220.0" mnemonicParsing="false" onAction="#logInButtonAction" onKeyReleased="#logInButtonAction" text="Sign In">
-                                 <effect>
-                                    <Blend />
-                                 </effect>
-                              </Button>
-                           </children>
-                        </AnchorPane>
-                          <Label layoutX="415.0" layoutY="56.0" prefHeight="20.0" prefWidth="70.0" text="Sign In" textFill="WHITE">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="205.0" fitWidth="252.0" layoutX="64.0" layoutY="49.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="/icons/TrendAssist Logo2.JPG" />
-                           </image></ImageView>
-                        <Label alignment="CENTER" layoutX="18.0" layoutY="311.0" prefHeight="29.0" prefWidth="300.0" text="Welcome to trendAssist" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                      </children>
-                  </Pane>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
+            <Button layoutX="37.0" layoutY="315.0" mnemonicParsing="false" onAction="#logInButtonAction" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #f44242;" text="Sign In" textFill="WHITE" />
+            <TextField fx:id="userID" alignment="CENTER" layoutX="39.0" layoutY="112.0" prefHeight="31.0" prefWidth="187.0" promptText="Username" />
+            <PasswordField fx:id="passID" alignment="CENTER" layoutX="39.0" layoutY="161.0" prefHeight="31.0" prefWidth="187.0" promptText="Password" />
+            <Label layoutX="97.0" layoutY="53.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fitHeight="238.0" fitWidth="297.0" layoutX="159.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/icons/TrendAssist Logo2.JPG" />
+         </image>
+      </ImageView>
+      <Label layoutX="97.0" layoutY="344.0" text="Welcome to trendAssist" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
