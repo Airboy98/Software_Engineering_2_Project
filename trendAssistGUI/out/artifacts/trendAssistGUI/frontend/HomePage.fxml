@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="736.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.HomePageController">
+   <children>
+      <Button layoutX="26.0" layoutY="120.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="122.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DisplacementMap>
+         </effect></Button>
+      <Button layoutX="26.0" layoutY="264.0" mnemonicParsing="false" onAction="#accountSettingsButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Account Settings" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button layoutX="376.0" layoutY="121.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="createAccount" layoutX="376.0" layoutY="264.0" mnemonicParsing="false" onAction="#createAccountButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Create New Account" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label fx:id="label" alignment="CENTER" layoutX="273.0" layoutY="55.0" prefHeight="43.0" prefWidth="189.0" text="trendAssist" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Candara Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="287.0" layoutY="408.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: ff5733;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font></Button>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</Pane>

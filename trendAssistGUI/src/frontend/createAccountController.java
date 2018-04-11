@@ -10,9 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -31,6 +29,9 @@ public class createAccountController implements Initializable {
     @FXML private PasswordField password1;
     @FXML private PasswordField password2;
     @FXML private ChoiceBox<String> Role;
+    @FXML private Label success;
+    @FXML private Label fail;
+    @FXML private Label role;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,12 +41,13 @@ public class createAccountController implements Initializable {
     //Method assign to the back button in the create account page so when clicked
     // it will go back to the homepage
     public void goHomePageAction(ActionEvent event) throws IOException {
+
         Parent createParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Scene createScene = new Scene(createParent);
         Stage createStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
-        createStage.setTitle("Back");
+        createStage.setTitle("Home Page");
         createStage.setResizable(false);
         createStage.hide();
         createStage.show();
@@ -80,6 +82,7 @@ public class createAccountController implements Initializable {
     // get username, password, and position from the user input and call a method,
     // from the encryption package to encrypt the new password and store the info
     // in the database.
+    @FXML
     public void createAccountButtonActionX(ActionEvent event) throws IOException {
 
         //New instance object for accessing encryption methods
@@ -94,13 +97,30 @@ public class createAccountController implements Initializable {
         //Check if any of the fields is empty and if it is prompt a message to the
         // user telling them to fill all the fields
         if (user.isEmpty() || pass1.isEmpty() || pass2.isEmpty()) {
-            System.out.println("Specify ALL account credentials");
+            Alert errorMessage = new Alert(Alert.AlertType.ERROR);
+            errorMessage.setTitle("Error creating account");
+            errorMessage.setContentText("Specify ALL account credentials!");
+            errorMessage.setHeaderText(null);
+            errorMessage.showAndWait();
         } else {
             //Check if both password are the same
             if (pass1.equals(pass2)) {
-
-                //Encryption method call
-                create.AddUser(user, pass1, pos);
+                if(pos.equals("Choose a Role")){
+                    role.setVisible(true);
+                    fail.setVisible(false);
+                    success.setVisible(false);
+                }else {
+                    //Encryption method call
+                    create.AddUser(user, pass1, pos);
+                    success.setVisible(true);
+                    fail.setVisible(false);
+                    role.setVisible(false);
+                }
+            }
+            else {
+                fail.setVisible(true);
+                success.setVisible(false);
+                role.setVisible(false);
             }
         }
     }

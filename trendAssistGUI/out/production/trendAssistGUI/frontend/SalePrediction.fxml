@@ -62,12 +62,12 @@
           <TableColumn fx:id="columnAvgSales" prefWidth="123.0" text="Average Sales" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="622.0" mnemonicParsing="false" onAction="#goHomePageAction" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #f44242;" text="Back" textFill="WHITE">
+      <Button layoutX="14.0" layoutY="638.0" mnemonicParsing="false" onAction="#goHomePageAction" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #f44242;" text="Back" textFill="WHITE">
          <font>
             <Font name="Candara" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="952.0" layoutY="621.0" mnemonicParsing="false" onAction="#goLoginAction" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #f44242;" text="Logout" textFill="WHITE">
+      <Button layoutX="965.0" layoutY="638.0" mnemonicParsing="false" onAction="#goLoginAction" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #f44242;" text="Log Out" textFill="WHITE">
          <font>
             <Font name="Candara" size="15.0" />
          </font></Button>

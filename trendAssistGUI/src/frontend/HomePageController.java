@@ -12,17 +12,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
-
 public class HomePageController {
 
+    public static Stage upStage = new Stage();
 
     //Button actions so when an specific button is clicked then switch to correct screen
     public void createAccountButtonAction(ActionEvent event) throws IOException {
         Parent createParent = FXMLLoader.load(getClass().getResource("createAccount.fxml"));
         Scene createScene = new Scene(createParent);
         Stage createStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        createStage.hide();
         createStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         createStage.setScene(createScene);
         createStage.setTitle("Create New Account");
@@ -66,11 +64,9 @@ public class HomePageController {
         logoutStage.show();
     }
 
-    public void uploadSalesDataButtonAction(ActionEvent event) throws IOException {
+    public void uploadSalesDataButtonAction() throws IOException {
         Parent upParent = FXMLLoader.load(getClass().getResource("UploadSalesData.fxml"));
         Scene upScene = new Scene(upParent);
-        Stage upStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        upStage.hide();
         upStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
         upStage.setScene(upScene);
         upStage.setTitle("Upload Sales Data");

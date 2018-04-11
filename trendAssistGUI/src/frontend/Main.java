@@ -20,7 +20,6 @@ public class Main extends Application {
         primaryStage.hide();
         primaryStage.setResizable(false);
         primaryStage.show();
-
     }
 
 

@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -37,17 +38,17 @@ public class AccountSettingsController {
     private ObservableList<UserDetails> data;
     static private Connection AccCon = DBconnection.getconac();
 
+    //This method when called will load a table view with all the accounts in the database
     public void loadDataFromDatabase() {
         List<String> passwords = new ArrayList<>();
-
         try {
             data = FXCollections.observableArrayList();
 
+            //SQL query to that returns all accounts in the database
             ResultSet rs = AccCon.createStatement().executeQuery("SELECT * FROM users");
             Integer i = 0;
             while (rs.next()) {
                 byte[] almost = Pll.stringToByte(rs.getString(3));
-
                 passwords.add(Pll.decrypt(almost));
                 data.add(new UserDetails(rs.getString(2), passwords.get(i), rs.getString(4)));
                 i++;
@@ -65,6 +66,7 @@ public class AccountSettingsController {
         table.setItems(data);
     }
 
+    //This method will field text fields when a row is selected in the table view
     public void selectRowItems() {
         if (table.getSelectionModel().getSelectedItem() != null) {
             UserDetails selectedRow = table.getSelectionModel().getSelectedItem();
@@ -75,10 +77,13 @@ public class AccountSettingsController {
         }
     }
 
+    //This method will delete an account from the database as long as it is
+    // selected by the user
     public void deleteAccount() {
         if (table.getSelectionModel().getSelectedItem() != null) {
             UserDetails selectedRow = table.getSelectionModel().getSelectedItem();
             try {
+                //Query to delete all the account information in the database
                 PreparedStatement pstmt = AccCon.prepareStatement("DELETE FROM users WHERE Username = ?");
                 pstmt.setString(1, selectedRow.getUser());
                 pstmt.executeUpdate();
@@ -86,6 +91,7 @@ public class AccountSettingsController {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            //Reload table view and clear text fields
             loadDataFromDatabase();
             uname.clear();
             pass.clear();
@@ -93,8 +99,11 @@ public class AccountSettingsController {
         }
     }
 
+    //This method will update an account in the database as long as the user make any
+    // changes to the username or password or the role
     public void updateAccount() {
         try {
+            //Query to update account in the database
             PreparedStatement pstmt = AccCon.prepareStatement("UPDATE users SET Username = ?, Passhash = ?, Position = ? WHERE Username = '" + tempUsername + "'");
             String Password = pass.getText();
             byte[] pass;
@@ -107,10 +116,11 @@ public class AccountSettingsController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        //Reload table view
         loadDataFromDatabase();
     }
 
-    //Method assign to the back button in the create account page so when clicked
+    //Method assign to the back button in the account settings page so when clicked
     // it will go back to the homepage
     public void goHomePageAction(ActionEvent event) throws IOException {
         Parent hpParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
@@ -124,7 +134,7 @@ public class AccountSettingsController {
         hpStage.show();
     }
 
-    //Method assign to the log out button in the create account screen so when clicked
+    //Method assign to the log out button in the account settings screen so when clicked
     // it will return to the login screen.
     public void goLoginAction(ActionEvent event) throws IOException {
         Parent createParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));

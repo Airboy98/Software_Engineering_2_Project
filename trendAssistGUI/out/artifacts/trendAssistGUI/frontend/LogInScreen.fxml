@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="468.0" prefWidth="846.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LogInController">
+   <children>
+      <ImageView fitHeight="468.0" fitWidth="886.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/icons/fallingNumbers.JPG" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="547.0" layoutY="37.0" prefHeight="395.0" prefWidth="263.0" style="-fx-background-color: #FF5733;">
+         <children>
+            <Button layoutX="37.0" layoutY="315.0" mnemonicParsing="false" onAction="#logInButtonAction" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #f44242;" text="Sign In" textFill="WHITE" />
+            <TextField fx:id="userID" alignment="CENTER" layoutX="39.0" layoutY="112.0" prefHeight="31.0" prefWidth="187.0" promptText="Username" />
+            <PasswordField fx:id="passID" alignment="CENTER" layoutX="39.0" layoutY="161.0" prefHeight="31.0" prefWidth="187.0" promptText="Password" />
+            <Label layoutX="97.0" layoutY="53.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fitHeight="238.0" fitWidth="297.0" layoutX="159.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/icons/TrendAssist Logo2.JPG" />
+         </image>
+      </ImageView>
+      <Label layoutX="97.0" layoutY="344.0" text="Welcome to trendAssist" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

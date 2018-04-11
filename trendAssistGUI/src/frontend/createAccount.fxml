@@ -26,15 +26,30 @@
          </font></Button>
       <AnchorPane layoutX="182.0" layoutY="78.0" prefHeight="308.0" prefWidth="239.0" style="-fx-background-color: #FF5733;">
          <children>
-            <TextField fx:id="userID" alignment="CENTER" layoutX="26.0" layoutY="35.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Username" />
-            <PasswordField fx:id="password1" alignment="CENTER" layoutX="26.0" layoutY="85.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Password" />
-            <PasswordField fx:id="password2" alignment="CENTER" layoutX="26.0" layoutY="130.0" prefHeight="31.0" prefWidth="187.0" promptText="Confirm Password" />
-            <ChoiceBox fx:id="Role" layoutX="60.0" layoutY="178.0" prefHeight="31.0" prefWidth="120.0" />
-            <Button fx:id="createAccountButton" alignment="CENTER" layoutX="17.0" layoutY="226.0" mnemonicParsing="false" onAction="#createAccountButtonActionX" prefHeight="55.0" prefWidth="207.0" style="-fx-background-color: #f44242;" text="Create Account" textFill="WHITE">
+            <TextField fx:id="userID" alignment="CENTER" layoutX="27.0" layoutY="25.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Username" />
+            <PasswordField fx:id="password1" alignment="CENTER" layoutX="26.0" layoutY="71.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Password" />
+            <PasswordField fx:id="password2" alignment="CENTER" layoutX="26.0" layoutY="116.0" prefHeight="31.0" prefWidth="187.0" promptText="Confirm Password" />
+            <ChoiceBox fx:id="Role" layoutX="44.0" layoutY="161.0" prefHeight="31.0" prefWidth="152.0" />
+            <Button fx:id="createAccountButton" alignment="CENTER" layoutX="17.0" layoutY="209.0" mnemonicParsing="false" onAction="#createAccountButtonActionX" prefHeight="55.0" prefWidth="207.0" style="-fx-background-color: #f44242;" text="Create Account" textFill="WHITE">
                <font>
                   <Font name="Candara" size="18.0" />
                </font>
             </Button>
+            <Label fx:id="success" layoutX="66.0" layoutY="276.0" text="Account Created!" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Candara" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="fail" layoutX="40.0" layoutY="276.0" text="Passwords do not match!" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Candara" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="role" layoutX="58.0" layoutY="276.0" text="Please select a role!" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Candara" size="15.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </Pane>

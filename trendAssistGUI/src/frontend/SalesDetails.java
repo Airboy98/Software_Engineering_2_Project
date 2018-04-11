@@ -24,7 +24,6 @@ public class SalesDetails {
         return avgSales.get();
     }
 
-
     public void setDate(String value) {
         date.set(value);
     }

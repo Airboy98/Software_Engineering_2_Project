@@ -21,8 +21,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import static frontend.HomePageController.upStage;
+import static frontend.LogInController.role;
 
 
 public class GenSalePredController {
@@ -34,7 +38,6 @@ public class GenSalePredController {
     @FXML private TableView<SalesDetails> table;
     @FXML private TableColumn<SalesDetails, String> columnDate;
     @FXML private TableColumn<SalesDetails, Float> columnAvgSales;
-
 
     //Method that will populate a bar graph based on user selection of dates he/she
     // wants to check
@@ -49,6 +52,8 @@ public class GenSalePredController {
         LocalDate ld1 = datePicker1.getValue();
         Integer d2 = ld1.getDayOfYear();
         Integer y2 = ld1.getYear();
+
+        DecimalFormat df = new DecimalFormat("#.##");
 
         //A DateTimeFormatter instance to format the date to the way its stored
         // in the database
@@ -74,7 +79,7 @@ public class GenSalePredController {
                 x[i] = temp[i].format(formatter);
                 y[i] = DbManager.WhatMonth(x[i]);
                 z[i] = DbManager.getNumDay(x[i], dow[i]);
-                w[i] = DbManager.frontGetAvg(x[i], dow[i]);
+                w[i] = Float.valueOf(df.format(DbManager.frontGetAvg(x[i], dow[i])));
             }
 
             XYChart.Series<String, Float> series = new XYChart.Series<>();
@@ -90,7 +95,7 @@ public class GenSalePredController {
                 p++;
             }
 
-            String value = String.valueOf(sum / p);
+            String value = String.valueOf(df.format(sum / p));
             Average.setText(value);
             barChart.getData().add(series);
 
@@ -105,15 +110,30 @@ public class GenSalePredController {
     //Method assign to the back button in the create account page so when clicked
     // it will go back to the homepage
     public void goHomePageAction(ActionEvent event) throws IOException {
-        Parent hpParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-        Scene hpScene = new Scene(hpParent);
-        Stage hpStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        hpStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
-        hpStage.setScene(hpScene);
-        hpStage.setTitle("Back");
-        hpStage.setResizable(false);
-        hpStage.hide();
-        hpStage.show();
+        if(role.equals("Man")) {
+            Parent hpParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+            Scene hpScene = new Scene(hpParent);
+            Stage hpStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            hpStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+            hpStage.setScene(hpScene);
+            hpStage.setTitle("Home Page");
+            hpStage.setResizable(false);
+            hpStage.hide();
+            hpStage.show();
+            upStage.close();
+        }
+        else if(role.equals("Emp")){
+            Parent hpParent = FXMLLoader.load(getClass().getResource("HomePage_employee.fxml"));
+            Scene hpScene = new Scene(hpParent);
+            Stage hpStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            hpStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+            hpStage.setScene(hpScene);
+            hpStage.setTitle("Home Page");
+            hpStage.setResizable(false);
+            hpStage.hide();
+            hpStage.show();
+            upStage.close();
+        }
     }
 
     //Method assign to the log out button in the create account screen so when clicked
@@ -128,5 +148,6 @@ public class GenSalePredController {
         createStage.setResizable(false);
         createStage.hide();
         createStage.show();
+        upStage.close();
     }
 }

@@ -20,7 +20,8 @@ public class LogInController{
 
     @FXML private TextField userID;
     @FXML private PasswordField passID;
-    @FXML private Label label;
+    @FXML private Label invalid;
+    static String role;
 
     //Action method assigned to the sign in button, so when clicked will
     // check username and password with the database using an decryption
@@ -42,26 +43,22 @@ public class LogInController{
         String[] checkResult = encrypt.CheckPass(user, pass);
 
         if(checkResult[0] == null && checkResult[1] == null){
-            Alert errorMessage = new Alert(Alert.AlertType.ERROR);
-            errorMessage.setTitle("Incorrect Username/Password");
-            errorMessage.setContentText("Incorrect username and/or password please try again!");
-            errorMessage.setHeaderText(null);
-            errorMessage.showAndWait();
+            invalid.setVisible(true);
         }
         else if(checkResult[0].equals("True") && checkResult[1].equals("Manager")){
-
+            role = "Man";
             Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-
-                Scene homePageScene = new Scene(homePageParent);
-                Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                appStage.hide();
-                appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
-                appStage.setScene(homePageScene);
-                appStage.setTitle("Home Page");
-                appStage.setResizable(false);
-                appStage.show();
+            Scene homePageScene = new Scene(homePageParent);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.hide();
+            appStage.getIcons().add(new Image("/icons/TrendAssist Logo2.jpg"));
+            appStage.setScene(homePageScene);
+            appStage.setTitle("Home Page");
+            appStage.setResizable(false);
+            appStage.show();
         }
-        else if(checkResult[0].equals("True") && checkResult[1].equals("Employee") ){
+        else if(checkResult[0].equals("True") && checkResult[1].equals("Employee")){
+            role = "Emp";
             Parent homePageParent = FXMLLoader.load(getClass().getResource("HomePage_employee.fxml"));
             Scene homePageScene = new Scene(homePageParent);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

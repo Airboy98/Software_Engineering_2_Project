@@ -15,7 +15,13 @@
     <root id="root">
       <element id="archive" name="trendAssistGUI.jar">
         <element id="module-output" name="trendAssistGUI" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
       </element>
+      <element id="library" level="project" name="mysql:mysql-connector-java:8.0.9-rc" />
+      <element id="library" level="module" name="JUnit5.0" module-name="trendAssistGUI" />
+      <element id="module-output" name="trendAssistGUI" />
     </root>
   </artifact>
 </component>

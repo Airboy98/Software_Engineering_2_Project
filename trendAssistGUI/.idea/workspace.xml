@@ -75,11 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+            <state relative-caret-position="199">
+              <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,8 +90,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+            <state relative-caret-position="315">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -100,8 +100,8 @@
       <file leaf-file-name="SalesDetails.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/SalesDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="357">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -110,23 +110,13 @@
       <file leaf-file-name="AccountSettingsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/AccountSettingsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2121">
-              <caret line="120" column="33" lean-forward="false" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
+            <state relative-caret-position="241">
+              <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
               <folding>
-                <marker date="1523299663075" expanded="true" signature="1434:1453" ph="SELECT * FRO... users" />
-                <marker date="1523299663075" expanded="true" signature="2821:2857" ph="DELETE FROM users... " />
-                <marker date="1523299663075" expanded="true" signature="3292:3389" ph="UPDATE users... " />
+                <marker date="1523407663857" expanded="true" signature="1594:1613" ph="SELECT * FRO... users" />
+                <marker date="1523407663857" expanded="true" signature="3244:3280" ph="DELETE FROM users... " />
+                <marker date="1523407663857" expanded="true" signature="3964:4061" ph="UPDATE users... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createAccountController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/createAccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -141,24 +131,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenSalePredController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
+      <file leaf-file-name="createAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/createAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2205">
-              <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+            <state relative-caret-position="672">
+              <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
+      <file leaf-file-name="GenSalePredController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="79" column="49" lean-forward="true" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,21 +154,33 @@
       <file leaf-file-name="UploadSalesDataController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/UploadSalesDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="56">
+              <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="passQL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Encryption/passQL.java">
+      <file leaf-file-name="HomePage_employee.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/HomePage_employee.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="808">
-              <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+            <state relative-caret-position="497">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
-                <marker date="1523127599177" expanded="true" signature="744:850" ph="INSERT into users... " />
-                <marker date="1523127599177" expanded="true" signature="1197:1249" ph="SELECT * FRO... users" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -251,21 +251,21 @@
         <option value="$PROJECT_DIR$/src/backend/DbManager.java" />
         <option value="$PROJECT_DIR$/src/backend/dailyavg.java" />
         <option value="$PROJECT_DIR$/src/frontend/UserDetails.java" />
-        <option value="$PROJECT_DIR$/src/frontend/SalesDetails.java" />
-        <option value="$PROJECT_DIR$/src/frontend/LogInScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/frontend/HomePage_employee.fxml" />
         <option value="$PROJECT_DIR$/src/frontend/createAccount.fxml" />
-        <option value="$PROJECT_DIR$/src/frontend/AccountSettings.fxml" />
+        <option value="$PROJECT_DIR$/src/frontend/LogInScreen.fxml" />
         <option value="$PROJECT_DIR$/src/frontend/HomePage.fxml" />
-        <option value="$PROJECT_DIR$/src/frontend/UploadSalesData.fxml" />
+        <option value="$PROJECT_DIR$/src/frontend/HomePage_employee.fxml" />
+        <option value="$PROJECT_DIR$/src/frontend/AccountSettings.fxml" />
         <option value="$PROJECT_DIR$/src/frontend/SalePrediction.fxml" />
+        <option value="$PROJECT_DIR$/src/frontend/UploadSalesData.fxml" />
         <option value="$PROJECT_DIR$/src/frontend/AccountSettingsController.java" />
         <option value="$PROJECT_DIR$/src/frontend/createAccountController.java" />
-        <option value="$PROJECT_DIR$/src/frontend/GenSalePredController.java" />
         <option value="$PROJECT_DIR$/src/frontend/HomePageController.java" />
-        <option value="$PROJECT_DIR$/src/frontend/LogInController.java" />
         <option value="$PROJECT_DIR$/src/frontend/Main.java" />
+        <option value="$PROJECT_DIR$/src/frontend/SalesDetails.java" />
+        <option value="$PROJECT_DIR$/src/frontend/LogInController.java" />
         <option value="$PROJECT_DIR$/src/frontend/UploadSalesDataController.java" />
+        <option value="$PROJECT_DIR$/src/frontend/GenSalePredController.java" />
       </list>
     </option>
   </component>
@@ -276,7 +276,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -301,13 +301,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="trendAssistGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="trendAssistGUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trendAssistGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trendAssistGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trendAssistGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -341,32 +345,33 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="dynamic.classpath" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -382,15 +387,13 @@
   </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
       <module />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="WIDTH" value="0" />
     </configuration>
     <configuration name="Encrypt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="Encryption.*" />
           <option name="ENABLED" value="true" />
@@ -409,7 +412,7 @@
       <envs />
     </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="frontend.*" />
           <option name="ENABLED" value="true" />
@@ -428,15 +431,15 @@
       <envs />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" singleton="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="sample.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -463,7 +466,7 @@
       <envs />
     </configuration>
     <configuration name="testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="backend.*" />
           <option name="ENABLED" value="true" />
@@ -500,6 +503,11 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="trendAssistGUI.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/trendAssistGUI/trendAssistGUI.jar" />
+      <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -553,17 +561,19 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
       <item index="2" class="java.lang.String" itemvalue="Application.testing" />
       <item index="3" class="java.lang.String" itemvalue="Application.Encrypt" />
+      <item index="4" class="java.lang.String" itemvalue="JAR Application.trendAssistGUI.jar" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Encrypt" />
-        <item index="2" class="java.lang.String" itemvalue="Application.testing" />
+        <item index="1" class="java.lang.String" itemvalue="JAR Application.trendAssistGUI.jar" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Encrypt" />
+        <item index="3" class="java.lang.String" itemvalue="Application.testing" />
       </list>
     </recent_temporary>
   </component>
@@ -610,12 +620,15 @@
       <workItem from="1523297791266" duration="622000" />
       <workItem from="1523298449395" duration="890000" />
       <workItem from="1523299382065" duration="284000" />
-      <workItem from="1523300105014" duration="166000" />
+      <workItem from="1523300105014" duration="2945000" />
+      <workItem from="1523370456615" duration="835000" />
+      <workItem from="1523393147557" duration="8162000" />
+      <workItem from="1523470173116" duration="1645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117301000" />
+    <option name="totallyTimeSpent" value="130722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,29 +640,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26673985" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24917673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12916666" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20833333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -657,7 +670,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -677,7 +689,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/frontend/AccountSettingsController.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -710,28 +730,10 @@
     <entry file="file://$PROJECT_DIR$/src/sample/createAccount.fxml" />
     <entry file="file://$PROJECT_DIR$/src/backend/cadetesting.py" />
     <entry file="file://$PROJECT_DIR$/src/backend/threadcontrol.java" />
-    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/rt.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="711" column="19" lean-forward="false" selection-start-line="711" selection-start-column="19" selection-end-line="711" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/rt.jar!/java/lang/String.class" />
     <entry file="file://$PROJECT_DIR$/src/Encryption/Main.java" />
-    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/javafx/fxml/Initializable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/com/sun/glass/ui/win/WinApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/javafx/fxml/Initializable.class" />
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/com/sun/glass/ui/win/WinApplication.class" />
     <entry file="file://$PROJECT_DIR$/src/backend/testing.java" />
     <entry file="file://$PROJECT_DIR$/src/Encryption/PasswordENC.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,13 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/javafx/util/Callback.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u152b991.1_windows_x64/jre/lib/ext/jfxrt.jar!/javafx/util/Callback.class" />
     <entry file="file://$PROJECT_DIR$/src/frontend/UserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-231">
@@ -762,10 +758,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Encryption/passQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding>
+            <marker date="1523127599177" expanded="true" signature="744:850" ph="INSERT into users... " />
+            <marker date="1523127599177" expanded="true" signature="1197:1249" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/createAccount.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-395">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -775,30 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/AccountSettings.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/LogInScreen.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/HomePage_employee.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -808,8 +793,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/HomePage.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="137" lean-forward="false" selection-start-line="48" selection-start-column="137" selection-end-line="48" selection-end-column="137" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -830,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/SalePrediction.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="275" lean-forward="false" selection-start-line="16" selection-start-column="275" selection-end-line="16" selection-end-column="275" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -839,22 +824,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/AccountSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2121">
-          <caret line="120" column="33" lean-forward="false" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
-          <folding>
-            <marker date="1523299663075" expanded="true" signature="1434:1453" ph="SELECT * FRO... users" />
-            <marker date="1523299663075" expanded="true" signature="2821:2857" ph="DELETE FROM users... " />
-            <marker date="1523299663075" expanded="true" signature="3292:3389" ph="UPDATE users... " />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/frontend/LogInScreen.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/createAccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+        <state relative-caret-position="672">
+          <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -867,66 +851,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2205">
-          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state relative-caret-position="315">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/SalesDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/UploadSalesDataController.java">
+    <entry file="file://$PROJECT_DIR$/src/frontend/AccountSettingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/passQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+        <state relative-caret-position="241">
+          <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
           <folding>
-            <marker date="1523127599177" expanded="true" signature="744:850" ph="INSERT into users... " />
-            <marker date="1523127599177" expanded="true" signature="1197:1249" ph="SELECT * FRO... users" />
+            <marker date="1523407663857" expanded="true" signature="1594:1613" ph="SELECT * FRO... users" />
+            <marker date="1523407663857" expanded="true" signature="3244:3280" ph="DELETE FROM users... " />
+            <marker date="1523407663857" expanded="true" signature="3964:4061" ph="UPDATE users... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="199">
+          <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/HomePage_employee.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/UploadSalesDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/GenSalePredController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="79" column="49" lean-forward="true" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -936,10 +932,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>trendAssistGUI</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
