@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: accounts
+-- Host: localhost    Database: salesdata
 -- ------------------------------------------------------
--- Server version	5.7.19-log
+-- Server version	5.7.21-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,30 +16,26 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `users`
+-- Table structure for table `dec`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `dec`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `CustomerID` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) NOT NULL,
-  `passhash` varchar(100) DEFAULT NULL,
-  `position` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`CustomerID`,`username`),
-  UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+CREATE TABLE `dec` (
+  `DayOfMonth` varchar(45) NOT NULL,
+  `AvgGrossSales` double NOT NULL,
+  PRIMARY KEY (`DayOfMonth`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `dec`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (23,'jimmy','91 -12 80 24 -8 29 -104 -112 -74 13 33 -91 -91 -63 45 -91 ','user'),(24,'hitler','91 -106 47 -27 100 24 -68 -18 -96 106 -41 -21 64 75 124 -111 ','manager');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+LOCK TABLES `dec` WRITE;
+/*!40000 ALTER TABLE `dec` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dec` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-27  9:18:10
+-- Dump completed on 2018-04-12 16:36:20

@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `CustomerID` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) NOT NULL,
-  `passhash` varchar(100) DEFAULT NULL,
-  `position` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`CustomerID`,`username`),
-  UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+  `AccountID` int(11) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(45) NOT NULL,
+  `Passhash` varchar(100) DEFAULT NULL,
+  `Position` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`AccountID`,`Username`),
+  UNIQUE KEY `username_UNIQUE` (`Username`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (23,'jimmy','91 -12 80 24 -8 29 -104 -112 -74 13 33 -91 -91 -63 45 -91 ','Employee'),(24,'hitler','91 -106 47 -27 100 24 -68 -18 -96 106 -41 -21 64 75 124 -111 ','Manager'),(31,'mayur','41 0 35 38 -112 8 -102 -106 -3 7 -81 74 -115 -27 -97 -122 ','Manager'),(32,'carolyn','66 -123 -75 117 -79 -42 -72 13 38 72 -52 -114 113 72 -127 84 ','Employee');
+INSERT INTO `users` VALUES (31,'bhakta','-67 -122 -110 -71 -71 122 83 20 -101 -84 -36 109 108 -53 42 32 ','Manager'),(36,'david','-19 103 124 33 59 120 48 -45 -78 -73 -44 -61 13 -55 -87 -123 ','Manager'),(40,'carolyn','66 -123 -75 117 -79 -42 -72 13 38 72 -52 -114 113 72 -127 84 ','Employee');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-30 18:08:30
+-- Dump completed on 2018-04-12 16:36:21

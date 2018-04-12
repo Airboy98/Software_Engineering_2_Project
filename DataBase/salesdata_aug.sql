@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: salesdata
 -- ------------------------------------------------------
--- Server version	5.7.20-log
+-- Server version	5.7.21-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,7 +35,7 @@ CREATE TABLE `aug` (
 
 LOCK TABLES `aug` WRITE;
 /*!40000 ALTER TABLE `aug` DISABLE KEYS */;
-INSERT INTO `aug` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',597.375),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
+INSERT INTO `aug` VALUES ('1fri',5630.9375),('1mon',295.53165),('1sat',5190.172),('1sun',381.1771),('1thu',2111.4023),('1tue',878.3633),('1wed',1780.0469),('2fri',3811.7852),('2mon',685.2383),('2sat',8727.707),('2sun',1088.5273),('2thu',1832.2773),('2tue',1247.0273),('2wed',866.6094),('3fri',3685.6328),('3mon',594.4844),('3sat',5108.797),('3sun',934.6344),('3thu',1986.332),('3tue',1091.0469),('3wed',1069.457),('4fri',389.00763),('4mon',158.72548),('4sat',84.04637),('4sun',50.99475),('4thu',75.600006),('4tue',51.210587),('4wed',291.3061),('5fri',134.79651),('5mon',560.5969),('5sat',294.91772),('5sun',276.15442),('5thu',389.00763),('5tue',58.376328),('5wed',41.929657);
 /*!40000 ALTER TABLE `aug` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-30 16:49:25
+-- Dump completed on 2018-04-12 16:36:19

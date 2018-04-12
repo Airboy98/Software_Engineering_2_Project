@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: salesdata
 -- ------------------------------------------------------
--- Server version	5.7.20-log
+-- Server version	5.7.21-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,7 +35,7 @@ CREATE TABLE `jul` (
 
 LOCK TABLES `jul` WRITE;
 /*!40000 ALTER TABLE `jul` DISABLE KEYS */;
-INSERT INTO `jul` VALUES ('1fri',0),('1mon',0),('1sat',0),('1sun',0),('1thu',0),('1tue',0),('1wed',0),('2fri',0),('2mon',0),('2sat',0),('2sun',0),('2thu',0),('2tue',0),('2wed',0),('3fri',0),('3mon',0),('3sat',0),('3sun',0),('3thu',0),('3tue',0),('3wed',0),('4fri',0),('4mon',0),('4sat',299.375),('4sun',172.5),('4thu',0),('4tue',0),('4wed',0),('5fri',536.375),('5mon',0),('5sat',0),('5sun',0),('5thu',0),('5tue',0),('5wed',0);
+INSERT INTO `jul` VALUES ('1fri',560.5969),('1mon',2968.4792),('1sat',4408.672),('1sun',1124.9896),('1thu',1869.3398),('1tue',1490.3633),('1wed',943.6094),('2fri',4036.7852),('2mon',920.7383),('2sat',5620.082),('2sun',433.77734),('2thu',2141.0898),('2tue',1697.7773),('2wed',986.9844),('3fri',4240.8203),('3mon',564.2969),('3sat',5506.672),('3sun',606.8844),('3thu',2074.082),('3tue',1065.1719),('3wed',1156.2695),('4fri',3485.293),('4mon',948.71484),('4sat',5281.254),('4sun',678.34375),('4thu',1777.0234),('4tue',1122.4023),('4wed',1174.2695),('5fri',134.79651),('5mon',985.625),('5sat',5696.0625),('5sun',974.59375),('5thu',389.00763),('5tue',58.376328),('5wed',41.929657);
 /*!40000 ALTER TABLE `jul` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-30 16:49:27
+-- Dump completed on 2018-04-12 16:36:20
