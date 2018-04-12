@@ -7,9 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -34,6 +36,7 @@ public class AccountSettingsController {
     @FXML private TextField uname;
     @FXML private TextField pass;
     @FXML private TextField pos;
+    @FXML private Label error;
     static String tempUsername;
     private ObservableList<UserDetails> data;
     static private Connection AccCon = DBconnection.getconac();
@@ -106,13 +109,21 @@ public class AccountSettingsController {
             //Query to update account in the database
             PreparedStatement pstmt = AccCon.prepareStatement("UPDATE users SET Username = ?, Passhash = ?, Position = ? WHERE Username = '" + tempUsername + "'");
             String Password = pass.getText();
-            byte[] pass;
-            pass = Pll.encryptPass(Password);
-            String holder = Pll.byteToString(pass);
-            pstmt.setString(1, uname.getText());
-            pstmt.setString(2, holder);
-            pstmt.setString(3, pos.getText());
-            pstmt.executeUpdate();
+            String Username = uname.getText();
+            String Position = pos.getText();
+            if(Password.isEmpty() || Username.isEmpty() || Position.isEmpty()){
+                error.setVisible(true);
+            }
+            else {
+                byte[] pass;
+                pass = Pll.encryptPass(Password);
+                String holder = Pll.byteToString(pass);
+                pstmt.setString(1, Username);
+                pstmt.setString(2, holder);
+                pstmt.setString(3, Position);
+                pstmt.executeUpdate();
+                error.setVisible(false);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
