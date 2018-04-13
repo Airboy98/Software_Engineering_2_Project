@@ -1,0 +1,51 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: salesdata
+-- ------------------------------------------------------
+-- Server version	5.7.21-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `may`
+--
+
+DROP TABLE IF EXISTS `may`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `may` (
+  `DayOfMonth` varchar(45) NOT NULL,
+  `AvgGrossSales` double NOT NULL,
+  PRIMARY KEY (`DayOfMonth`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `may`
+--
+
+LOCK TABLES `may` WRITE;
+/*!40000 ALTER TABLE `may` DISABLE KEYS */;
+INSERT INTO `may` VALUES ('1fri',9125.9375),('1mon',768.3542),('1sat',4595.797),('1sun',37.94869),('1thu',2128.0898),('1tue',1048.6133),('1wed',806.9219),('2fri',6034.9727),('2mon',569.3633),('2sat',7158.707),('2sun',401.52734),('2thu',2004.7773),('2tue',1827.9023),('2wed',1255.8594),('3fri',6824.5703),('3mon',848.5469),('3sat',9268.109),('3sun',334.63437),('3thu',2946.707),('3tue',1766.0469),('3wed',1106.3945),('4fri',4330.543),('4mon',630.52734),('4sat',6120.504),('4sun',1506.3438),('4thu',2917.7734),('4tue',1220.2773),('4wed',1242.5195),('5fri',134.79651),('5mon',152.1875),('5sat',294.91772),('5sun',276.15442),('5thu',389.00763),('5tue',976.59766),('5wed',656.0078);
+/*!40000 ALTER TABLE `may` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-04-12 16:36:20
