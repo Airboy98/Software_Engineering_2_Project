@@ -1,0 +1,4 @@
+Dependencies - 
+mySQL community server https://dev.mysql.com/downloads/mysql/
+mySQL workbench https://www.mysql.com/products/workbench/
+Java 8.0 or higher http://www.oracle.com/technetwork/java/javase/downloads/index.html
