@@ -11,7 +11,7 @@
 
 <Pane maxHeight="800.0" maxWidth="1200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="736.0" style="-fx-background-color: black; -fx-border-color: FF5733; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.HomePageController">
    <children>
-      <Button layoutX="26.0" layoutY="120.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="122.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Generate Sale Prediction" textFill="WHITE">
+      <Button layoutX="26.0" layoutY="120.0" mnemonicParsing="false" onAction="#salePredictionButtonAction" prefHeight="122.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Generate Sales Prediction" textFill="WHITE">
          <font>
             <Font name="Candara" size="24.0" />
          </font>
