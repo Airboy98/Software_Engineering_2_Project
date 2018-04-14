@@ -91,7 +91,6 @@ public class UploadSalesDataController {
         createStage.setResizable(false);
         createStage.hide();
         createStage.show();
-        upStage.close();
     }
 
 }
