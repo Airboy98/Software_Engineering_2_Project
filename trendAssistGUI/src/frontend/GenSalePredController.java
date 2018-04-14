@@ -59,7 +59,7 @@ public class GenSalePredController {
         // in the database
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
-        if (y2 - y1 < 0) {
+        if (y2 - y1 < 0 || d2 - d1 < 0) {
             Alert errorMessage = new Alert(Alert.AlertType.ERROR);
             errorMessage.setTitle("Incorrect Date");
             errorMessage.setContentText("Please input correct dates!");
