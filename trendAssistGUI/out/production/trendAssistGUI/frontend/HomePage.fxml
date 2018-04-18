@@ -32,7 +32,7 @@
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button layoutX="376.0" layoutY="121.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Upload Sales Data" textFill="WHITE">
+      <Button layoutX="376.0" layoutY="121.0" mnemonicParsing="false" onAction="#uploadSalesDataButtonAction" prefHeight="120.0" prefWidth="330.0" style="-fx-background-color: FF5733;" text="Modify Sales Data" textFill="WHITE">
          <font>
             <Font name="Candara" size="24.0" />
          </font>
