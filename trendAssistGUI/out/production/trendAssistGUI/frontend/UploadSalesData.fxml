@@ -18,7 +18,7 @@
          <font>
             <Font name="Candara" size="15.0" />
          </font></Button>
-        <Button fx:id="upload" layoutX="182.0" layoutY="126.0" mnemonicParsing="false" onAction="#uploadData" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #f44242;" text="Done" textFill="WHITE">
+        <Button fx:id="upload" layoutX="182.0" layoutY="126.0" mnemonicParsing="false" onAction="#uploadData" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #f44242;" text="Upload" textFill="WHITE">
          <font>
             <Font name="Candara" size="15.0" />
          </font></Button>
